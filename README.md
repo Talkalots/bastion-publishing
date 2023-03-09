@@ -1,2 +1,2 @@
 # bastion-publishing
-Bastion Publishing SotM decks for Sentinels Digital
+Bastion Publishing SoTM decks for Sentinels Digital
