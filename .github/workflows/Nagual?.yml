@@ -1,0 +1,438 @@
+{
+  "name": "Os Seis Nagual",
+  "kind": "Hero",
+  "expansionIdentifier": "Bastion",
+  "initialCardIdentifiers": [
+    "OsSeisNagualCharacter"
+  ],
+  "promoCards": [],
+  "cards": [
+    {
+      "identifier": "OsSeisNagualCharacter",
+      "count": 1,
+      "title": "Os Seis Nagual",
+      "body": "Predator Instinct",
+      "backgroundColor": "EDE5ED",
+      "foilBackgroundColor": "EDE5ED",
+      "hitpointsColor": "E8E8E8",
+      "character": true,
+      "powers": [
+        "Play the top card of your deck."
+      ],
+      "icons": [],
+      "hitpoints": 29,
+      "nemesisIdentifiers": [
+        "Talkalots.Estrangular"
+      ],
+      "incapacitatedAbilities": [
+        "Shuffle a trash into it's corresponding deck.",
+        "Discard the top card of a deck.",
+        "One hero may play a card."
+      ],
+      "flippedIcons": [],
+      "openingLines": {
+        "Talkalots.Estrangular": "Tremble and Obey!"
+      },
+      "complexity": 3
+    },
+    {
+      "identifier": "CleftMask",
+      "count": 2,
+      "title": "Cleft Mask",
+      "keywords": [
+        "Relic",
+        "Equipment",
+        "Limited"
+      ],
+      "icons": [],
+      "body": [
+        "At the end of your turn, Nagual deals himself 4 psychic damage. If no damage is taken this way, destroy this card."
+      ],
+      "powers": [
+        "Draw 4 cards. You may discard any number of cards. Nagual deals a target X energy damage, where X is the number of cards discarded this way."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Nagual",
+          "text": "Abeulo poured his soul into creating this mask. I wear it only when the need is most dire."
+        }
+      ],
+      "flavorReference": "Nagual, Os Seis Annual Vol:1 #4"
+    },
+    {
+      "identifier": "ExhaustedRecovery",
+      "count": 3,
+      "title": "Exhausted Recovery",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DrawCardExtra",
+        "GainHP"
+      ],
+      "body": [
+        "Draw two cards.",
+        "If Nagual is below 10 HP, he regains 3 HP."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Cottonmouth",
+          "text": "Oh, look. The poor pussycat is tired."
+        },
+        {
+          "identifier": "Taipan",
+          "text": "I want to see him suffer."
+        }
+      ],
+      "flavorReference": "Behind the Veil #15"
+    },
+    {
+      "identifier": "JadeAxe",
+      "count": 2,
+      "title": "Jade Axe",
+      "keywords": [
+        "Relic",
+        "Equipment",
+        "Limited"
+      ],
+      "icons": [
+        "HasPower",
+        "DrawCardExtra",
+        "Discard",
+        "DealDamageMelee"
+      ],
+      "powers": [
+        "Draw a card or discard a card. Nagual deals 1 target 1 melee damage."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abeulo Ariche",
+          "text": "Carving a piece of jade into an axe is a lost art."
+        }
+      ],
+      "flavorReference": "Abeulo Ariche, Olmec Legends #9"
+    },
+    {
+      "identifier": "JaguarPelt",
+      "count": 2,
+      "title": "Jaguar Pelt",
+      "keywords": [
+        "Relic",
+        "Equipment",
+        "Limited"
+      ],
+      "icons": [
+        "HasPower",
+        "DealDamageMelee"
+      ],
+      "powers": [
+        "Nagual deals one target 2 melee damage. If you have no cards in hand, Nagual deals another target 2 melee damage."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abeulo Ariche",
+          "text": "Jaguar has mystical powers."
+        },
+        {
+          "identifier": "Nagual",
+          "text": "So, by wearing the pelt I can draw on them?"
+        }
+      ],
+      "flavorReference": "Olmec Legends #1"
+    },
+    {
+      "identifier": "LashingClaws",
+      "count": 2,
+      "title": "Lashing Claws",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [],
+      "body": [
+        "If you have no cards in hand, the first time each turn Nagual is dealt damage, Nagual deals 1 target 2 melee damage. ",
+        "At the end of your turn you may discard a card, if you do one player draws a card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Nagual",
+          "text": "My people suffered at your hands, now suffer at MINE!"
+        }
+      ],
+      "flavorReference": "Nagual, Night Terrors #4"
+    },
+    {
+      "identifier": "MoonlightDance",
+      "count": 3,
+      "title": "Moonlight Dance",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [
+        "IncreaseDamageDealtMelee",
+        "HasPower",
+        "Discard",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "If you have no cards in hand, increase all melee damage Nagual deals by 1."
+      ],
+      "powers": [
+        "Discard up to 3 cards. Nagual deals 1 target X plus 2 melee damage, where X is the number of cards discarded this way."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Nagual",
+          "text": "Our tonal animals are always within us; with a channeling dance, I let mine free."
+        }
+      ],
+      "flavorReference": "Nagual, Olmec Legends #2"
+    },
+    {
+      "identifier": "Pounce",
+      "count": 3,
+      "title": "Pounce",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "ReduceDamageDealt"
+      ],
+      "body": [
+        "Nagual deals a target 2 melee damage. Until the start of your next turn, reduce all damage dealt by that target by 1."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Rico",
+          "text": "I told you that burning the fields would work. Those farmers have all run away."
+        }
+      ],
+      "flavorReference": "Rico, Night Terrors #3"
+    },
+    {
+      "identifier": "PredatorsCamouflage",
+      "count": 2,
+      "title": "Predator's Camouflage",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [],
+      "body": [
+        "Whenever Nagual is dealt damage, you may discard one card to reduce that damage by 1. If you have no cards in hand, reduce all damage dealt to Nagual by 1."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Hired Mercs",
+          "text": "Can't wait to get out of this god-forsaken swamp."
+        },
+        {
+          "identifier": "Arsonist",
+          "text": "Did you hear that?"
+        }
+      ],
+      "flavorReference": "Night Terrors #3"
+    },
+    {
+      "identifier": "PrideAndFerocity",
+      "count": 2,
+      "title": "Pride and Ferocity",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DealDamageRadiant"
+      ],
+      "body": [
+        "Nagual deals a target 2 radiant damage. If a hero took damage this way they may draw 2 cards."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abeulo Ariche",
+          "text": "Who, and what you are will be proved when struggles come."
+        }
+      ],
+      "flavorReference": "Abeulo Ariche, Olmec Legends #1"
+    },
+    {
+      "identifier": "ProwlUnseen",
+      "count": 3,
+      "title": "Prowl Unseen",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "PlayCardNow"
+      ],
+      "body": [
+        "Reveal the top two cards of the villain deck. Place one on the top of the deck and the other on the bottom of the deck.",
+        "You may draw a card or play a card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abeulo Ariche",
+          "text": "Come Jose, you must learn to embrace the shadows."
+        }
+      ],
+      "flavorReference": "Abeulo Ariche, Olmec Legends #1"
+    },
+    {
+      "identifier": "ReplenishedByRain",
+      "count": 3,
+      "title": "Replenished by Rain",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "GainHP",
+        "DealDamageRadiant",
+        "Discard"
+      ],
+      "body": [
+        "At the end of your turn, if you have no cards in hand, Nagual regains 1 HP.",
+        "Otherwise, you may discard a card to have Nagual deal a target 2 radiant damage."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Nagual",
+          "text": "The storms are not to be feared, for with the rain comes rebirth, regrowth, and renewal."
+        }
+      ],
+      "flavorReference": "Nagual, Night Terrors #22"
+    },
+    {
+      "identifier": "RisingStrength",
+      "count": 2,
+      "title": "Rising Strength",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [
+        "HasPower",
+        "EndOfTurnAction"
+      ],
+      "body": [
+        "At the end of your turn, you may place a card from your hand under this card."
+      ],
+      "powers": [
+        "Nagual deals himself and all non-hero targets X melee damage, where X is the number of cards under this card. Put all cards under this card into your hand. Destroy this card."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Nagual",
+          "text": "As I diminish in power the beast within rises up."
+        }
+      ],
+      "flavorReference": "Nagual, Behind the Veil #15"
+    },
+    {
+      "identifier": "ScourTheLand",
+      "count": 3,
+      "title": "Scour the Land",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DestroyEnvironment",
+        "DealDamageMelee"
+      ],
+      "body": [
+        "Destroy an environment card.",
+        "Nagual deals 1 target 2 melee damage."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Natureza",
+          "text": "How do you know this terrain so well?"
+        },
+        {
+          "identifier": "Nagual",
+          "text": "I wandered the rainforest as a feral beast."
+        }
+      ],
+      "flavorReference": "Nature Journal Vol:1 #2"
+    },
+    {
+      "identifier": "ShamansCalendar",
+      "count": 3,
+      "title": "Shaman's Calendar",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [],
+      "body": [
+        "You may skip your draw phase. If you do, reveal the top card of your deck, then either put it into play or discard it."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Abeulo Ariche",
+          "text": "Studying the stars will help you predict the future, and predicting the future can help you change it."
+        }
+      ],
+      "flavorReference": "Abeulo Ariche, Olmec Legends #7"
+    },
+    {
+      "identifier": "Shapeshifting",
+      "count": 2,
+      "title": "Shapeshifting",
+      "keywords": [
+        "One-Shot"
+      ],
+      "icons": [
+        "DrawCardNow",
+        "Discard"
+      ],
+      "body": [
+        "If you have no cards in hand, draw three cards. Otherwise, discard any number of cards.",
+        "Reveal cards from your deck until you have revealed X Ongoing cards, where X is the number of cards you discarded. Put one of them into play and shuffle all other revealed cards back into your deck."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "IQ",
+          "text": "Meow! Is that something I could learn? I've got a few minutes before class!"
+        },
+        {
+          "identifier": "Nagual",
+          "text": "Mastery took years of focus, and practice."
+        }
+      ],
+      "flavorReference": "Os Seis Annual Vol:2 #3"
+    },
+    {
+      "identifier": "ViciousTeeth",
+      "count": 3,
+      "title": "Vicious Teeth",
+      "keywords": [
+        "Ongoing",
+        "Limited"
+      ],
+      "icons": [
+        "EndOfTurnAction",
+        "DealDamageMelee",
+        "Discard"
+      ],
+      "body": [
+        "At the end of your turn, if you have no cards in hand, Nagual may deal 1 target 2 melee damage.",
+        "Otherwise, you may discard up to three cards."
+      ],
+      "flavorQuotes": [
+        {
+          "identifier": "Meme",
+          "text": "Jose, what makes the jaguar so dangerous?"
+        },
+        {
+          "identifier": "Nagual",
+          "text": "Jaguars are so deadly because they are able to approach unseen and then strike."
+        }
+      ],
+      "flavorReference": "Night Terrors #16"
+    }
+  ]
+}
