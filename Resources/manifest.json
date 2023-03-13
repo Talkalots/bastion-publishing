@@ -1,0 +1,19 @@
+{
+   "title":"Bastion Publishing",
+   "author":"JohnTBapt",
+   "description":"Summary goes here",
+   "namespace":"Bastion",
+   "dll":"BastionComics.dll",
+   "version":"0.5",
+   "color":"000000",
+   "manualTags":[],
+   "decks":{
+   },
+   "variants":{
+   },
+   "credits":[
+   "Credits can have many lines.",
+   "This line is one of them.",
+   "This line is another one of them."
+   ]
+}
