@@ -9,13 +9,12 @@ using System.Text;
 
 namespace Bastion.Nagual
 {
-    public class ShapeshiftingCardController : CardController
+    public class ShapeshiftingCardController : NagualHandCheckCardController
     {
         public ShapeshiftingCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-            // Show number of cards in Nagual's hand
-            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.HeroTurnTaker.Hand);
+
         }
 
         public override IEnumerator Play()
