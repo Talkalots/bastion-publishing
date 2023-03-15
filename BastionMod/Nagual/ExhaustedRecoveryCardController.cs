@@ -19,7 +19,7 @@ namespace Bastion.Nagual
 
         public override IEnumerator Play()
         {
-            // "Draw two cards."
+            // "Draw 2 cards."
             IEnumerator drawCoroutine = DrawCards(base.DecisionMaker, 2);
             if (base.UseUnityCoroutines)
             {

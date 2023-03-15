@@ -19,8 +19,7 @@ namespace Bastion.Nagual
 
         public override IEnumerator UsePower(int index = 0)
         {
-            int numTargets = GetPowerNumeral(0, 1);
-            int meleeAmt = GetPowerNumeral(1, 1);
+            int meleeAmt = GetPowerNumeral(0, 1);
             // "Draw a card or discard a card."
             List<Function> options = new List<Function>();
             Function draw = new Function(base.DecisionMaker, "Draw a card", SelectionType.DrawCard, () => DrawCard(base.HeroTurnTaker), CanDrawCards(base.DecisionMaker), base.TurnTaker.NameRespectingVariant + " has no cards in hand and must draw a card.", "Draw a card");
@@ -40,8 +39,8 @@ namespace Bastion.Nagual
                     base.GameController.ExhaustCoroutine(chooseCoroutine);
                 }
             }
-            // "{NagualCharacter} deals 1 target 1 melee damage."
-            IEnumerator meleeCoroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, new DamageSource(base.GameController, base.CharacterCard), meleeAmt, DamageType.Melee, numTargets, false, numTargets, cardSource: GetCardSource());
+            // "{NagualCharacter} deals a target 1 melee damage."
+            IEnumerator meleeCoroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, new DamageSource(base.GameController, base.CharacterCard), meleeAmt, DamageType.Melee, 1, false, 1, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(meleeCoroutine);

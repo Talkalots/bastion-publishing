@@ -52,7 +52,7 @@
 				"At the end of your turn, {NagualCharacter} may deal himself 3 psychic damage. If no damage is taken this way, destroy this card."
 			],
 			"powers": [
-				"Draw 3 cards. You may discard any number of cards. Nagual deals a target X energy damage, where X = the number of cards discarded this way."
+				"Draw 3 cards. You may discard any number of cards. Nagual deals a target X radiant damage, where X = the number of cards discarded this way."
 			],
 			"icons": [
 				"EndOfTurnAction",
@@ -61,7 +61,7 @@
 				"HasPower",
 				"DrawCardNow",
 				"Discard",
-				"DealDamageEnergy"
+				"DealDamageRadiant"
 			],
 			"flavorQuotes": [
 				{
@@ -79,7 +79,7 @@
 				"one-shot"
 			],
 			"body": [
-				"Draw two cards.",
+				"Draw 2 cards.",
 				"If {NagualCharacter} has fewer than 10 HP, he regains 3 HP."
 			],
 			"icons": [
@@ -108,7 +108,7 @@
 				"limited"
 			],
 			"powers": [
-				"Draw a card or discard a card. {NagualCharacter} deals 1 target 1 melee damage."
+				"Draw a card or discard a card. {NagualCharacter} deals a target 1 melee damage."
 			],
 			"icons": [
 				"HasPower",
@@ -134,7 +134,7 @@
 				"limited"
 			],
 			"powers": [
-				"{NagualCharacter} deals one target 2 melee damage. If you have no cards in hand, {NagualCharacter} deals another target 2 melee damage."
+				"{NagualCharacter} deals a target 2 melee damage. If you have no cards in hand, {NagualCharacter} deals another target 2 melee damage."
 			],
 			"icons": [
 				"HasPower",
@@ -161,7 +161,7 @@
 				"limited"
 			],
 			"body": [
-				"The first time {NagualCharacter} is dealt damage each turn, if you have no cards in hand, {NagualCharacter} deals 1 target 2 melee damage.",
+				"The first time {NagualCharacter} is dealt damage each turn, if you have no cards in hand, {NagualCharacter} deals a target 2 melee damage.",
 				"At the end of your turn, you may discard a card. If you do, one player draws a card."
 			],
 			"icons": [
@@ -311,7 +311,7 @@
 				"limited"
 			],
 			"body": [
-				"At the end of your turn, if you have no cards in hand, {NagualCharacter} regains 1 HP. Otherwise, you may discard a card. If you do, {NagualCharacter} deals a target 2 radiant damage."
+				"At the end of your turn, if you have no cards in hand, {NagualCharacter} regains 1 HP. Otherwise, you may discard a card and {NagualCharacter} deals a target 2 radiant damage."
 			],
 			"icons": [
 				"EndOfTurnAction",
@@ -442,7 +442,7 @@
 				"limited"
 			],
 			"body": [
-				"At the end of your turn, if you have no cards in hand, {NagualCharacter} may deal 1 target 2 melee damage. Otherwise, you may discard up to 3 cards."
+				"At the end of your turn, if you have no cards in hand, {NagualCharacter} deals a target 2 melee damage. Otherwise, you may discard up to 3 cards."
 			],
 			"icons": [
 				"EndOfTurnAction",
