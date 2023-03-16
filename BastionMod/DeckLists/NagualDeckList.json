@@ -190,13 +190,12 @@
 				"If you have no cards in hand, increase melee damage dealt by {NagualCharacter} by 1."
 			],
 			"powers": [
-				"Discard up to 3 cards. {NagualCharacter} deals 1 target X melee damage, where X = the number of cards discarded this way plus 2."
+				"Reveal the top 2 cards of your deck. Put any Ongoing cards revealed this way into play. Shuffle the other revealed cards back into your deck."
 			],
 			"icons": [
 				"IncreaseDamageDealtMelee",
 				"HasPower",
-				"Discard",
-				"DealDamageMelee"
+				"Search"
 			],
 			"flavorQuotes": [
 				{
