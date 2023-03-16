@@ -8,6 +8,9 @@
    "color":"000000",
    "manualTags":[],
    "decks":{
+		"heroes": [
+			"Nagual"
+		]
    },
    "variants":{
    },
