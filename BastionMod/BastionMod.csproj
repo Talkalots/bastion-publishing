@@ -36,8 +36,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Nagual\CleftMaskCardController.cs" />
     <Compile Include="Nagual\ExhaustedRecoveryCardController.cs" />
     <Compile Include="Nagual\JadeAxeCardController.cs" />
+    <Compile Include="Nagual\JaguarPeltCardController.cs" />
+    <Compile Include="Nagual\MoonlightDanceCardController.cs" />
     <Compile Include="Nagual\NagualCharacterCardController.cs" />
     <Compile Include="Nagual\NagualHandCheckCardController.cs" />
     <Compile Include="Nagual\PounceCardController.cs" />
