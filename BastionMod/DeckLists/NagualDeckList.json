@@ -66,7 +66,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Nagual",
-					"text": "Abeulo poured his soul into creating this mask. I wear it only when the need is most dire."
+					"text": "Abeulo poured his soul{BR}into creating this mask. I wear it{BR}only when the need is most dire."
 				}
 			],
 			"flavorReference": "Nagual, Os Seis Vol. 1 Annual #4"
@@ -89,7 +89,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Cottonmouth",
-					"text": "Oh, look. The poor pussycat is tired."
+					"text": "Oh, look. The poor{BR}pussycat is tired."
 				},
 				{
 					"identifier": "Taipan",
@@ -119,7 +119,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Abuelo Ariche",
-					"text": "Carving a piece of jade into an axe is a lost art."
+					"text": "Carving a piece of jade{BR}into an axe is a lost art."
 				}
 			],
 			"flavorReference": "Abuelo Ariche, Olmec Legends #9"
@@ -143,11 +143,11 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Abuelo Ariche",
-					"text": "Jaguar has mystical powers."
+					"text": "Jaguar has{BR}mystical powers."
 				},
 				{
 					"identifier": "Nagual",
-					"text": "So, by wearing the pelt I can draw on them?"
+					"text": "So, by wearing the pelt I can{BR}draw on them?"
 				}
 			],
 			"flavorReference": "Olmec Legends #1"
@@ -173,7 +173,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Nagual",
-					"text": "My people suffered at your hands, now suffer at [b]mine![/b]"
+					"text": "My people suffered at your{BR}hands, now suffer at [b]mine![/b]"
 				}
 			],
 			"flavorReference": "Nagual, Night Terrors #4"
@@ -200,7 +200,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Nagual",
-					"text": "Our tonal animals are always within us; with a channeling dance, I let mine free."
+					"text": "Our tonal animals{BR}are always within us;{BR}with a channeling dance, I let{BR}mine free."
 				}
 			],
 			"flavorReference": "Nagual, Olmec Legends #2"
@@ -222,7 +222,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Rico",
-					"text": "I told you that burning the fields would work. Those farmers have all run away."
+					"text": "I told you that{BR}burning the fields would work.{BR}Those farmers have all run away."
 				}
 			],
 			"flavorReference": "Rico, Night Terrors #3"
@@ -246,7 +246,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Hired Mercs",
-					"text": "Can’t wait to get out of this god-forsaken swamp."
+					"text": "Can’t wait to get{BR}out of this{BR}god-forsaken swamp."
 				},
 				{
 					"identifier": "Arsonist",
@@ -272,7 +272,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Abuelo Ariche",
-					"text": "Who, and what you are will be proved when struggles come."
+					"text": "Who, and what you are will be{BR}proved when struggles come."
 				}
 			],
 			"flavorReference": "Abuelo Ariche, Olmec Legends #1"
@@ -296,7 +296,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Abuelo Ariche",
-					"text": "Come Jose, you must learn to embrace the shadows."
+					"text": "Come Jose,{BR}you must learn to{BR}embrace the shadows."
 				}
 			],
 			"flavorReference": "Abuelo Ariche, Olmec Legends #1"
@@ -321,7 +321,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Nagual",
-					"text": "The storms are not to be feared, for with the rain comes rebirth, regrowth, and renewal."
+					"text": "The storms are not to be feared,{BR}for with the rain comes rebirth,{BR}regrowth, and renewal."
 				}
 			],
 			"flavorReference": "Nagual, Night Terrors #22"
@@ -350,7 +350,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Nagual",
-					"text": "As I diminish in power the beast within rises up."
+					"text": "As I diminish in power...{BR} the beast within rises up."
 				}
 			],
 			"flavorReference": "Nagual, Behind the Veil #15"
@@ -373,11 +373,11 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Natureza",
-					"text": "How do you know this terrain so well?"
+					"text": "How do you know{BR}this terrain so well?"
 				},
 				{
 					"identifier": "Nagual",
-					"text": "I wandered the rainforest as a feral beast."
+					"text": "I wandered the rainforest{BR}as a feral beast."
 				}
 			],
 			"flavorReference": "Nature Journal Vol. 1 #2"
@@ -399,7 +399,7 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Abuelo Ariche",
-					"text": "Studying the stars will help you predict the future, and predicting the future can help you change it."
+					"text": "Studying the stars will{BR}help you predict the future, and{BR}predicting the future can{BR}help you change it."
 				}
 			],
 			"flavorReference": "Abuelo Ariche, Olmec Legends #7"
@@ -423,11 +423,11 @@
 			"flavorQuotes": [
 				{
 					"identifier": "IQ",
-					"text": "Meow! Is that something I could learn? I’ve got a few minutes before class!"
+					"text": "Meow! Is that something{BR}I could learn? I’ve got{BR}a few minutes before class!"
 				},
 				{
 					"identifier": "Nagual",
-					"text": "Mastery took years of focus, and practice."
+					"text": "Mastery took years of{BR}focus and practice."
 				}
 			],
 			"flavorReference": "Os Seis Vol. 2 Annual #3"
@@ -451,11 +451,11 @@
 			"flavorQuotes": [
 				{
 					"identifier": "Meme",
-					"text": "Jose, what makes the jaguar so dangerous?"
+					"text": "Jose, what makes the{BR}jaguar so dangerous?"
 				},
 				{
 					"identifier": "Nagual",
-					"text": "Jaguars are so deadly because they are able to approach unseen and then strike."
+					"text": "Jaguars are so deadly because they{BR}are able to approach unseen and{BR}then strike."
 				}
 			],
 			"flavorReference": "Night Terrors #16"
