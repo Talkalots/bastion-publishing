@@ -40,14 +40,20 @@
     <Compile Include="Nagual\ExhaustedRecoveryCardController.cs" />
     <Compile Include="Nagual\JadeAxeCardController.cs" />
     <Compile Include="Nagual\JaguarPeltCardController.cs" />
+    <Compile Include="Nagual\LashingClawsCardController.cs" />
     <Compile Include="Nagual\MoonlightDanceCardController.cs" />
     <Compile Include="Nagual\NagualCharacterCardController.cs" />
     <Compile Include="Nagual\NagualHandCheckCardController.cs" />
     <Compile Include="Nagual\PounceCardController.cs" />
+    <Compile Include="Nagual\PredatorsCamouflageCardController.cs" />
     <Compile Include="Nagual\PrideAndFerocityCardController.cs" />
     <Compile Include="Nagual\ProwlUnseenCardController.cs" />
+    <Compile Include="Nagual\ReplenishedByRainCardController.cs" />
+    <Compile Include="Nagual\RisingStrengthCardController.cs" />
     <Compile Include="Nagual\ScourTheLandCardController.cs" />
+    <Compile Include="Nagual\ShamansCalendarCardController.cs" />
     <Compile Include="Nagual\ShapeshiftingCardController.cs" />
+    <Compile Include="Nagual\ViciousTeethCardController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

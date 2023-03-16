@@ -310,7 +310,7 @@
 				"limited"
 			],
 			"body": [
-				"At the end of your turn, if you have no cards in hand, {NagualCharacter} regains 1 HP. Otherwise, you may discard a card and {NagualCharacter} deals a target 2 radiant damage."
+				"At the end of your turn, if you have no cards in hand, {NagualCharacter} regains 1 HP. Otherwise, you may discard a card to have {NagualCharacter} deal a target 2 radiant damage."
 			],
 			"icons": [
 				"EndOfTurnAction",
