@@ -24,8 +24,8 @@ namespace Bastion.Nagual
             base.AddTriggers();
             // "You may skip your draw phase. If you do, reveal the top card of your deck, then either put it into play or discard it."
             // To make this run smoothly even with the "automatically draw cards when safe to do so" option enabled:
-            // 1) when Nagual draws a card, if it's his draw phase, set HasDrawnCardsThisPhase to true
-            AddTrigger((DrawCardAction dca) => dca.HeroTurnTaker == base.HeroTurnTaker && base.GameController.ActiveTurnTaker == base.TurnTaker && base.GameController.ActiveTurnPhase.IsDrawCard, SetTrueResponse, TriggerType.Other, TriggerTiming.After);
+            // 1) when Nagual draws a card, if it's his draw phase and HasDrawnCardsThisPhase is false, set HasDrawnCardsThisPhase to true
+            AddTrigger((DrawCardAction dca) => dca.HeroTurnTaker == base.HeroTurnTaker && base.GameController.ActiveTurnTaker == base.TurnTaker && base.GameController.ActiveTurnPhase.IsDrawCard && !GetCardPropertyJournalEntryBoolean(HasDrawnCardsThisPhase).GetValueOrDefault(), SetTrueResponse, TriggerType.Other, TriggerTiming.After);
             AddAfterLeavesPlayAction((GameAction ga) => ResetFlagAfterLeavesPlay(HasDrawnCardsThisPhase), TriggerType.Hidden);
             // 2) at the end of Nagual's draw phase...
             // ... if HasDrawnCardsThisPhase is false, reveal the top card of his deck and put it into play or discard it
