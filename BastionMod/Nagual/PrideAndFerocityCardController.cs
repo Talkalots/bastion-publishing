@@ -20,8 +20,7 @@ namespace Bastion.Nagual
         public override IEnumerator Play()
         {
             // "{NagualCharacter} deals a target 2 radiant damage."
-            List<DealDamageAction> damageResults = new List<DealDamageAction>();
-            IEnumerator radiantCoroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, new DamageSource(base.GameController, base.CharacterCard), 2, DamageType.Radiant, 1, false, 1, storedResultsDamage: damageResults, cardSource: GetCardSource());
+            IEnumerator radiantCoroutine = base.GameController.SelectTargetsAndDealDamage(base.DecisionMaker, new DamageSource(base.GameController, base.CharacterCard), 2, DamageType.Radiant, 1, false, 1, addStatusEffect: OnHeroDamageResponse, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(radiantCoroutine);
@@ -30,17 +29,24 @@ namespace Bastion.Nagual
             {
                 base.GameController.ExhaustCoroutine(radiantCoroutine);
             }
+        }
+
+        private IEnumerator OnHeroDamageResponse(DealDamageAction dda)
+        {
             // "If a hero was dealt damage this way, that hero's player may draw 2 cards."
-            List<TurnTaker> relevantPlayers = (from dda in damageResults where dda != null && dda.DidDealDamage && dda.Target.IsHeroCharacterCard && dda.Target.Owner.IsHero select dda.Target.Owner).Distinct().ToList();
-            IEnumerator drawCoroutine = base.GameController.SelectHeroToDrawCards(base.DecisionMaker, 2, optionalSelectHero: true, additionalCriteria: new LinqTurnTakerCriteria((TurnTaker tt) => relevantPlayers.Contains(tt)), cardSource: GetCardSource());
-            if (base.UseUnityCoroutines)
+            if (dda.Target.IsHeroCharacterCard && dda.Target.Owner.IsHero)
             {
-                yield return base.GameController.StartCoroutine(drawCoroutine);
+                IEnumerator drawCoroutine = DrawCards(FindHeroTurnTakerController(dda.Target.Owner.ToHero()), 2, optional: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(drawCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(drawCoroutine);
+                }
             }
-            else
-            {
-                base.GameController.ExhaustCoroutine(drawCoroutine);
-            }
+            yield break;
         }
     }
 }
