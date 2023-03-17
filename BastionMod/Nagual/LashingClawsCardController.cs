@@ -36,7 +36,7 @@ namespace Bastion.Nagual
             String message = base.Card.Title + " reacts!";
             if (base.HeroTurnTaker.HasCardsInHand)
             {
-                message = base.Card.Title + " reacts, but " + base.TurnTaker.Name + " has at least one card in hand...";
+                message = base.Card.Title + " reacts, but " + base.TurnTaker.Name + " has at least one card in hand, so he doesn't deal damage.";
             }
             IEnumerator messageCoroutine = base.GameController.SendMessageAction(message, Priority.High, GetCardSource(), showCardSource: true);
             if (base.UseUnityCoroutines)
