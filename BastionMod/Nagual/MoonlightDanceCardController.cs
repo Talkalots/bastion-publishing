@@ -14,7 +14,8 @@ namespace Bastion.Nagual
         public MoonlightDanceCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
         {
-
+            // Show number of Ongoing cards in Nagual's deck
+            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.TurnTaker.Deck, new LinqCardCriteria((Card c) => c.IsOngoing, "Ongoing"));
         }
 
         public override void AddTriggers()
