@@ -53,6 +53,19 @@ namespace Bastion.Nagual
                         base.GameController.ExhaustCoroutine(reduceCoroutine);
                     }
                 }
+                if (!base.HeroTurnTaker.HasCardsInHand)
+                {
+                    // If their hand is empty now, the other reduction effect also activates
+                    IEnumerator reduceCoroutine = base.GameController.ReduceDamage(dda, 1, null, GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(reduceCoroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(reduceCoroutine);
+                    }
+                }
             }
         }
     }
