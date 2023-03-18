@@ -1,0 +1,600 @@
+{
+	"name": "Estrangular",
+	"kind": "Villain",
+	"initialCardIdentifiers": [
+		"EstrangularCharacter"
+	],
+	"cards": [
+		{
+			"identifier": "EstrangularCharacter",
+			"count": 1,
+			"title": "Rico Homem",
+			"keywords": [
+				"villain"
+			],
+			"body": "Jealous Cattle Baron",
+			"backgroundColor": "32CD32",
+			"character": true,
+			"hitpoints": 25,
+			"nemesisIdentifiers": [
+				""
+			],
+			"setup": [
+				"Put the villain character card into play [i]Jealous Cattle Baron[/i] side up. Search the villain deck for {ContrabandAPC} and put it into play, then reveal cards from the top of the villain deck until {H - 2} Minions are revealed, put them into play, and shuffle the other revealed cards back into the deck."
+			],
+			"gameplay": [
+				"If [i]Rico Homem[/i] is reduced to 0 or fewer HP, the heroes lose the game.",
+				"Activate the {human} on villain cards.",
+				"At the start of the villain turn, if {H} or more Minions are in the villain trash, search the villain deck for {AncientSerpentArmband} and put it into play.",
+				"At the end of the villain turn, each villain target regains 1 HP, then play the top card of the villain deck."
+			],
+			"advanced": [
+				"At the start of the villain turn, play the top card of the villain deck."
+			],
+			"icons": [
+				"LoseTheGame",
+				"StartAndEndOfTurnAction",
+				"Search",
+				"GainHP",
+				"PlayCardNow"
+			],
+			"advancedIcons": [
+			],
+			"flippedTitle": "Estrangular",
+			"flippedBody": "Vision Serpent Incarnate",
+			"flippedHitpoints": 75,
+			"flippedGameplay": [
+				"When the villain character flips to this side, he regains {H * 5} HP.",
+				"Activate the {snake} on villain cards.",
+				"At the start of the villain turn, if {AncientSerpentArmband} is not in play, shuffle the villain trash into the villain deck, then flip this card.",
+				"At the end of the villain turn, [i]Estrangular[/i] deals each other target 1 melee damage, then deals the hero target with the highest HP 2 melee damage and 2 infernal damage."
+			],
+			"flippedAdvanced": [
+				"Reduce damage dealt to [i]Estrangular[/i] by 1."
+			],
+			"flippedIcons": [
+				"GainHP",
+				"StartAndEndOfTurnAction",
+				"FlipCard",
+				"DealDamageMelee",
+				"DealDamageInfernal"
+			],
+			"flippedAdvancedIcons": [
+				"ReduceDamageTaken"
+			],
+			"difficulty": 2,
+			"openingLines": {
+				"default": "Tremble and obey!"
+			}
+		},
+		{
+			"identifier": "AncientSerpentArmband",
+			"count": 1,
+			"title": "Ancient Serpent Armband",
+			"keywords": [
+				"relic"
+			],
+			"body": [
+				"When this card enters play, flip the villain character card to [i]Estrangular, Vision Serpent Incarnate.[/i]",
+				"Reduce all non-melee non-projectile damage dealt to [i]Estrangular[/i] by 2.",
+				"At the start of each player's turn, that player may discard their hand to destroy this card."
+			],
+			"icons": [
+				"FlipCard",
+				"ReduceDamageTaken",
+				"StartOfTurnAction",
+				"Discard",
+				"DestroySelf"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Abuelo Ariche",
+					"text": "There is a powerful{BR}darkness that lurks in the shadows,{BR}an ancient evil waiting to be rediscovered."
+				}
+			],
+			"flavorReference": "Abuelo Ariche, Olmec Legends #3"
+		},
+		{
+			"identifier": "Arsonist",
+			"count": 1,
+			"title": "Arsonist",
+			"keywords": [
+				"anti-hero"
+			],
+			"hitpoints": 11,
+			"body": [
+				"{human} At the start of the villain turn, [i]Arsonist[/i] deals the {H - 1} non-villain targets with the highest HP 2 fire damage each.",
+				"{snake} At the end of the villain turn, [i]Arsonist[/i] deals [i]Estrangular[/i] 4 fire damage."
+			],
+			"icons": [
+				"StartAndEndOfTurnAction",
+				"DealDamageFire"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Arsonist",
+					"text": "It's just a job."
+				},
+				{
+					"identifier": "Nagual",
+					"text": "For you, yes. But these were our homes, our lives."
+				}
+			],
+			"flavorReference": "Night Terrors #5"
+		},
+		{
+			"identifier": "CallToArms",
+			"count": 2,
+			"title": "Call to Arms",
+			"keywords": [
+				"one-shot"
+			],
+			"body": [
+				"Put all Minions from the villain trash into play.",
+				"{human} The villain target with the lowest HP deals the hero with the highest HP {H - 1} melee damage.",
+				"{snake} The minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
+			],
+			"icons": [
+				"PlayCardNow",
+				"DealDamageMelee",
+				"DealDamageProjectile"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Taipan",
+					"text": "We brought the first class of Vipers."
+				},
+				{
+					"identifier": "Estrangular",
+					"text": "Young, Ruthlesss, Perfect."
+				}
+			],
+			"flavorReference": "Behind the Veil #15"
+		},
+		{
+			"identifier": "ContrabandAPC",
+			"count": 1,
+			"title": "Contraband APC",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 15,
+			"body": [
+				"Increase damage dealt by [i]Estrangular[/i] to the {ContrabandAPC} by 2.",
+				"{human} At the end of the villain turn, {ContrabandAPC} deals the {H - 2} non-Villain targets with the highest HP 3 projectile damage each.",
+				"{snake} At the end of the villain turn, {ContrabandAPC} deals [i]Estrangular[/i] 4 projectile damage."
+			],
+			"icons": [
+				"IncreaseDamageTaken",
+				"EndOfTurnAction",
+				"DealDamageProjectile"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Arsonist",
+					"text": "Argentine made, 30mm cannon,{BR}a mechanized terror."
+				},
+				{
+					"identifier": "Rico",
+					"text": "In hard times, everything has a price."
+				}
+			],
+			"flavorReference": "Night Terrors #2"
+		},
+		{
+			"identifier": "DeadlyPersistence",
+			"count": 1,
+			"title": "Deadly Persistence",
+			"keywords": [
+				"ongoing"
+			],
+			"body": [
+				"{human} Whenever a villain target is destroyed, [i]Rico Homem[/i] deals each hero target 1 projectile damage.",
+				"{snake} Reduce projectile damage dealt to [i]Estrangular[/i] by 2."
+			],
+			"icons": [
+				"DealDamageProjectile",
+				"ReduceDamageTakenProjectile"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Estrangular",
+					"text": "You thought I would be{BR}harmed by some bright light?"
+				}
+			],
+			"flavorReference": "Estrangular, Behind the Veil #4"
+		},
+		{
+			"identifier": "DisgustingLeer",
+			"count": 1,
+			"title": "Disgusting Leer",
+			"keywords": [
+				"one-shot"
+			],
+			"body": [
+				"{human} The hero with the most cards in play cannot use powers until the start of the next villain turn.",
+				"{snake} The hero with the most cards in hand cannot play cards until the start of the next villain turn."
+			],
+			"icons": [
+				"CannotUsePowers",
+				"CannotPlayCards"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Meme",
+					"text": "Someone was watching us bathing."
+				},
+				{
+					"identifier": "Abuelo Ariche",
+					"text": "I will speak to Jose, he will handle it."
+				}
+			],
+			"flavorReference": "Night Terrors #1"
+		},
+		{
+			"identifier": "FueledByAnger",
+			"count": 1,
+			"title": "Fueled by Anger",
+			"keywords": [
+				"ongoing"
+			],
+			"body": [
+				"{human} Increase damage dealt by villain targets by 1.",
+				"{snake} Increase damage dealt by [i]Estrangular[/i] by 1."
+			],
+			"icons": [
+				"IncreaseDamageDealt"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "Those farmers made a fool of me!"
+				},
+				{
+					"identifier": "Arsonist",
+					"text": "Murder isn't included in the price we discussed."
+				}
+			],
+			"flavorReference": "Night Terrors #3"
+		},
+		{
+			"identifier": "HiredMercs",
+			"count": 1,
+			"title": "Hired Mercs",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 5,
+			"body": [
+				"{human} At the end of the villain turn, this card deals the {H - 2} heroes with the most cards in hand 2 projectile damage each.",
+				"{snake} At the end of the villain turn, each player may draw a card."
+			],
+			"icons": [
+				"EndOfTurnAction",
+				"DealDamageProjectile",
+				"DrawCardNow"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "The job is simple,{BR}and if things get messy,{BR}I have found a specialist."
+				}
+			],
+			"flavorReference": "Rico, Night Terrors #1"
+		},
+		{
+			"identifier": "HorrifyingTransformation",
+			"count": 2,
+			"title": "Horrifying Transformation",
+			"keywords": [
+				"one-shot"
+			],
+			"body": [
+				"{human} The villain target with the highest HP deals each hero target 1 psychic damage. Search the villain deck and trash for {AncientSerpentArmband} and put it into play. If you searched the deck, shuffle it.",
+				"{snake} [i]Estrangular[/i] deals each target 1 melee damage. Destroy each target with 1 HP."
+			],
+			"icons": [
+				"DealDamagePsychic",
+				"Search",
+				"DealDamageMelee",
+				"DestroyTarget"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Arsonist",
+					"text": "Jefe? Jefe?"
+				},
+				{
+					"identifier": "Estrangular",
+					"text": "[b]}inhuman screaming{[/b]"
+				},
+				{
+					"identifier": "Arsonist",
+					"text": "[b]Kill that thing![/b]"
+				}
+			],
+			"flavorReference": "Night Terrors #4"
+		},
+		{
+			"identifier": "LariatEspinosa",
+			"count": 1,
+			"title": "\"Lariat\" Espinosa",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 6,
+			"body": [
+				"{human} At the start of the villain turn, this card deals the hero target with the second lowest HP 2 melee damage.",
+				"{snake} Reduce damage dealt by [i]Estrangular[/i] by 1."
+			],
+			"icons": [
+				"StartOfTurnAction",
+				"DealDamageMelee",
+				"ReduceDamageDealt"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "Enough games. Throw a rope around that farmer's neck and let him swing."
+				}
+			],
+			"flavorReference": "Rico, Night Terrors #1"
+		},
+		{
+			"identifier": "MesmerisingPresence",
+			"count": 1,
+			"title": "Mesmerising Presence",
+			"keywords": [
+				"ongoing"
+			],
+			"body": [
+				"{human} Redirect all damage that would be dealt to villain targets to [i]Rico Homem[/i].",
+				"{snake} The hero with the fewest cards in play can only use 1 power during their turn."
+			],
+			"icons": [
+				"RedirectDamage",
+				"CannotUsePowers"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Estrangular",
+					"text": "Look deeply, look into my eyesss. Can you sssee what you desssire mossst?"
+				}
+			],
+			"flavorReference": "Behind the Veil #84"
+		},
+		{
+			"identifier": "Poachers",
+			"count": 2,
+			"title": "Poachers",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 4,
+			"body": [
+				"{human} At the end of the villain turn, this card deals the non-villain target with the lowest HP 2 projectile damage.",
+				"{snake} At the end of the villain turn, this card deals [i]Estrangular[/i] 2 projectile damage."
+			],
+			"icons": [
+				"EndOfTurnAction",
+				"DealDamageProjectile"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "I have heard that you like{BR}the thrill of hunting. On my ranch{BR}we have many... exotic targets."
+				}
+			],
+			"flavorReference": "Rico, Night Terrors #1"
+		},
+		{
+			"identifier": "RapidEscalation",
+			"count": 1,
+			"title": "Rapid Escalation",
+			"keywords": [
+				"one-shot"
+			],
+			"body": [
+				"{human} Shuffle the villain trash into the villain deck. Play the top 2 cards of the villain deck.",
+				"{snake} [i]Estrangular[/i] deals the hero target with the highest HP {H} melee damage and regains {H * 2} HP. Shuffle the villain trash into the villain deck."
+			],
+			"icons": [
+				"PlayCardNow",
+				"DealDamageMelee",
+				"GainHP"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Estrangular",
+					"text": "After ssso many yearsss, the tassste of blood. My power isss returning."
+				}
+			],
+			"flavorReference": "Estrangular, Night Terrors #4"
+		},
+		{
+			"identifier": "ResilientSpirit",
+			"count": 1,
+			"title": "Resilient Spirit",
+			"keywords": [
+				"ongoing"
+			],
+			"body": [
+				"{human} The first time [i]Rico Homem[/i] would be dealt damage each turn, redirect that damage to the non-villain target with the lowest HP.",
+				"{snake} The first time [i]Estrangular[/i] would be dealt damage each turn, he deals the source of that damage {H - 2} melee damage."
+			],
+			"icons": [
+				"RedirectDamage",
+				"DealDamageMelee"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "\"Lariat\" Espinosa",
+					"text": "Please! I have a family, let me go. I will never speak of what happened here!"
+				}
+			],
+			"flavorReference": "\"Lariat\" Espinosa, Night Terrors #4"
+		},
+		{
+			"identifier": "RitualMask",
+			"count": 1,
+			"title": "Ritual Mask",
+			"keywords": [
+				"relic"
+			],
+			"hitpoints": 5,
+			"body": [
+				"This card is immune to damage dealt by villain targets.",
+				"Damage dealt by [i]Estrangular[/i] is irreducible.",
+				"At the end of the villain turn, each player may discard a card. Each hero whose player did not discard a card this way deals themself 1 psychic damage."
+			],
+			"icons": [
+				"ImmuneToDamage",
+				"MakeDamageIrreducible",
+				"EndOfTurnAction",
+				"Discard",
+				"DealDamagePsychic"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Obscuro",
+					"text": "Ah, the key to infinite{BR}power, and yet the fools have left it{BR}here unprotected!"
+				}
+			],
+			"flavorReference": "Obscuro, Horizons #25"
+		},
+		{
+			"identifier": "SacrificialDagger",
+			"count": 1,
+			"title": "Sacrificial Dagger",
+			"keywords": [
+				"relic"
+			],
+			"hitpoints": 5,
+			"body": [
+				"This card is immune to damage dealt by villain targets.",
+				"Increase damage dealt by [i]Estrangular[/i] by 1.",
+				"At the end of the villain turn, the villain target with the highest HP deals the hero target with the second highest HP 2 melee damage."
+			],
+			"icons": [
+				"ImmuneToDamage",
+				"IncreaseDamageDealt",
+				"EndOfTurnAction",
+				"DealDamageMelee"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Museum Guide",
+					"text": "Here we see a selection{BR}of pre-Aztec items recovered{BR}from a cultural site just recently."
+				}
+			],
+			"flavorReference": "Museum Guide, Behind the Veil #1"
+		},
+		{
+			"identifier": "SpursVillarosa",
+			"count": 1,
+			"title": "\"Spurs\" Villarosa",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 4,
+			"body": [
+				"{human} At the end of the villain turn, this card deals the hero target with the highest HP 2 melee damage.",
+				"{snake} At the start of each hero turn, this card deals [i]Estrangular[/i] 1 melee damage."
+			],
+			"icons": [
+				"StartAndEndOfTurnAction",
+				"DealDamageMelee"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "My foreman will also ride along."
+				},
+				{
+					"identifier": "Arsonist",
+					"text": "He looks like a fighting cock."
+				}
+			],
+			"flavorReference": "Night Terrors #2"
+		},
+		{
+			"identifier": "ToroRocco",
+			"count": 1,
+			"title": "\"Toro\" Rocco",
+			"keywords": [
+				"minion"
+			],
+			"hitpoints": 8,
+			"body": [
+				"{human} At the end of the villain turn, this card deals the non-villain target with the highest HP {H - 1} melee damage.",
+				"{snake} At the start of the villain turn, this card deals the villain target with the highest HP {H - 1} melee damage."
+			],
+			"icons": [
+				"StartAndEndOfTurnAction",
+				"DealDamageMelee"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Arsonist",
+					"text": "This job is going to{BR}require skilled soldiers."
+				},
+				{
+					"identifier": "Rico",
+					"text": "I will send several of my 'hands' to{BR}help with the work."
+				}
+			],
+			"flavorReference": "Night Terrors #2"
+		},
+		{
+			"identifier": "TreacherousAmbush",
+			"count": 2,
+			"title": "Treacherous Ambush",
+			"keywords": [
+				"one-shot"
+			],
+			"body": [
+				"{human} [i]Rico Homem[/i] deals the hero target with the lowest HP 3 projectile damage. Each villain target regains {H - 1} HP.",
+				"{snake} [i]Estrangular[/i] deals the 2 hero targets with the lowest HP {H - 2} toxic damage each. Play the top card of the villain deck."
+			],
+			"icons": [
+				"DealDamageProjectile",
+				"GainHP",
+				"DealDamageToxic",
+				"PlayCardNow"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Rico",
+					"text": "Not to worry, road{BR}access to the village will be...{BR}unavailable."
+				}
+			],
+			"flavorReference": "Rico, Night Terrors #2"
+		},
+		{
+			"identifier": "VipersVenom",
+			"count": 2,
+			"title": "Viper's Venom",
+			"keywords": [
+				"ongoing"
+			],
+			"body": [
+				"{human} The first time any villain target deals damage each turn, increase that damage by 2 and change its type to toxic.",
+				"{snake} Change all damage dealt by [i]Estrangular[/i] to Toxic. Increase damage dealt by [i]Estrangular[/i] by 1."
+			],
+			"icons": [
+				"IncreaseDamageDealt"
+			],
+			"flavorQuotes": [
+				{
+					"identifier": "Kodiak",
+					"text": "Took me almost an hour{BR}to pry the jaws loose."
+				},
+				{
+					"identifier": "Doc Havoc",
+					"text": "This venom is no laughing matter."
+				}
+			],
+			"flavorReference": "Active Duty One-Shot"
+		}
+	]
+}
