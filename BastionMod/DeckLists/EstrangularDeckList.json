@@ -17,20 +17,18 @@
 			"character": true,
 			"hitpoints": 25,
 			"nemesisIdentifiers": [
-				""
+				"Bastion.Nagual"
 			],
 			"setup": [
 				"Put the villain character card into play [i]Jealous Cattle Baron[/i] side up. Search the villain deck for {ContrabandAPC} and put it into play, then reveal cards from the top of the villain deck until {H - 2} Minions are revealed, put them into play, and shuffle the other revealed cards back into the deck."
 			],
 			"gameplay": [
-				"If [i]Rico Homem[/i] is reduced to 0 or fewer HP, the heroes lose the game.",
+				"If [i]Rico Homem[/i] is reduced to 0 or fewer HP or otherwise destroyed, the heroes lose the game.",
 				"Activate the {human} on villain cards.",
-				"At the start of the villain turn, if {H} or more Minions are in the villain trash, search the villain deck for {AncientSerpentArmband} and put it into play.",
+				"At the start of the villain turn, if there are {H} or more Minions in the villain trash, search the villain deck and trash for {AncientSerpentArmband} and put it into play.",
 				"At the end of the villain turn, each villain target regains 1 HP, then play the top card of the villain deck."
 			],
-			"advanced": [
-				"At the start of the villain turn, play the top card of the villain deck."
-			],
+			"advanced": "At the start of the villain turn, play the top card of the villain deck.",
 			"icons": [
 				"LoseTheGame",
 				"StartAndEndOfTurnAction",
@@ -46,12 +44,11 @@
 			"flippedGameplay": [
 				"When the villain character flips to this side, he regains {H * 5} HP.",
 				"Activate the {snake} on villain cards.",
+				"Whenever [i]Estrangular[/i] destroys a target, he regains 3 HP.",
 				"At the start of the villain turn, if {AncientSerpentArmband} is not in play, shuffle the villain trash into the villain deck, then flip this card.",
 				"At the end of the villain turn, [i]Estrangular[/i] deals each other target 1 melee damage, then deals the hero target with the highest HP 2 melee damage and 2 infernal damage."
 			],
-			"flippedAdvanced": [
-				"Reduce damage dealt to [i]Estrangular[/i] by 1."
-			],
+			"flippedAdvanced": "Reduce damage dealt to [i]Estrangular[/i] by 1.",
 			"flippedIcons": [
 				"GainHP",
 				"StartAndEndOfTurnAction",
