@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estrangular\AncientSerpentArmbandCardController.cs" />
+    <Compile Include="Estrangular\CallToArmsCardController.cs" />
+    <Compile Include="Estrangular\DisgustingLeerCardController.cs" />
     <Compile Include="Estrangular\EstrangularCharacterCardController.cs" />
+    <Compile Include="Estrangular\EstrangularOneShotCardController.cs" />
     <Compile Include="Estrangular\HumanSnakeUtilityCardController.cs" />
     <Compile Include="Nagual\CleftMaskCardController.cs" />
     <Compile Include="Nagual\ExhaustedRecoveryCardController.cs" />

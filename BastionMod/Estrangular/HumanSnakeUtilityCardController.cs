@@ -22,6 +22,8 @@ namespace Bastion.Estrangular
         public const string HUMAN = "{human}";
         public const string SNAKE = "{snake}";
 
+        public const string MinionKeyword = "minion";
+
         public bool ActivateHuman => CanActivateEffect(base.TurnTakerController, HUMAN);
         public bool ActivateSnake => CanActivateEffect(base.TurnTakerController, SNAKE);
     }

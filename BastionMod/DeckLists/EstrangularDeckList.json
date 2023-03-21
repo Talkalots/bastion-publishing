@@ -129,7 +129,7 @@
 			"body": [
 				"Put all Minions from the villain trash into play.",
 				"{human} The villain target with the lowest HP deals the hero with the highest HP {H - 1} melee damage.",
-				"{snake} The minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
+				"{snake} The Minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
 			],
 			"icons": [
 				"PlayCardNow",
