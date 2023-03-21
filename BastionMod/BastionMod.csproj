@@ -41,6 +41,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estrangular\AncientSerpentArmbandCardController.cs" />
     <Compile Include="Estrangular\EstrangularCharacterCardController.cs" />
     <Compile Include="Estrangular\HumanSnakeUtilityCardController.cs" />
     <Compile Include="Nagual\CleftMaskCardController.cs" />
