@@ -15,7 +15,7 @@ namespace Bastion.Nagual
             : base(card, turnTakerController)
         {
             // Show number of Ongoing cards in Nagual's deck
-            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.TurnTaker.Deck, new LinqCardCriteria((Card c) => c.IsOngoing, "Ongoing"));
+            SpecialStringMaker.ShowNumberOfCardsAtLocation(base.TurnTaker.Deck, new LinqCardCriteria((Card c) => IsOngoing(c), "Ongoing"));
         }
 
         public override void AddTriggers()
@@ -29,7 +29,7 @@ namespace Bastion.Nagual
         {
             int numRevealed = GetPowerNumeral(0, 2);
             // "Reveal the top 2 cards of your deck. Put any Ongoing cards revealed this way into play. Shuffle the other revealed cards back into your deck."
-            IEnumerator revealCoroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, false, true, false, new LinqCardCriteria((Card c) => c.IsOngoing, "Ongoing"), null, numRevealed, revealedCardDisplay: RevealedCardDisplay.Message);
+            IEnumerator revealCoroutine = RevealCards_MoveMatching_ReturnNonMatchingCards(base.TurnTakerController, base.TurnTaker.Deck, false, true, false, new LinqCardCriteria((Card c) => IsOngoing(c), "Ongoing"), null, numRevealed, revealedCardDisplay: RevealedCardDisplay.Message);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(revealCoroutine);

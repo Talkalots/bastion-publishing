@@ -47,7 +47,7 @@ namespace Bastion.Nagual
                 }
                 int numOngoingCards = discardResults.Count();
                 // "Reveal cards from your deck until X Ongoing cards are revealed, where X = the number of cards you discarded. Put one of them into play. Shuffle the other revealed cards back into your deck."
-                IEnumerator revealCoroutine = RevealCards_SelectSome_MoveThem_ReturnTheRest(base.DecisionMaker, base.TurnTakerController, base.TurnTaker.Deck, (Card c) => c.IsOngoing, numOngoingCards, 1, false, true, false, "Ongoing cards");
+                IEnumerator revealCoroutine = RevealCards_SelectSome_MoveThem_ReturnTheRest(base.DecisionMaker, base.TurnTakerController, base.TurnTaker.Deck, (Card c) => IsOngoing(c), numOngoingCards, 1, false, true, false, "Ongoing cards");
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(revealCoroutine);
