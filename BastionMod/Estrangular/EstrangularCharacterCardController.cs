@@ -216,7 +216,7 @@ namespace Bastion.Estrangular
             List<DealDamageAction> instances = new List<DealDamageAction>();
             instances.Add(new DealDamageAction(GetCardSource(), new DamageSource(base.GameController, base.Card), null, 2, DamageType.Melee));
             instances.Add(new DealDamageAction(GetCardSource(), new DamageSource(base.GameController, base.Card), null, 2, DamageType.Infernal));
-            IEnumerator highestCoroutine = DealMultipleInstancesOfDamageToHighestLowestHP(instances, (Card c) => c.IsHero, HighestLowestHP.HighestHP);
+            IEnumerator highestCoroutine = DealMultipleInstancesOfDamageToHighestLowestHP(instances, (Card c) => IsHeroTarget(c), HighestLowestHP.HighestHP);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(highestCoroutine);
