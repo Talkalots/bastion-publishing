@@ -155,7 +155,7 @@ namespace Bastion.Estrangular
         private IEnumerator HealPlayResponse(PhaseChangeAction pca)
         {
             // "... each villain target regains 1 HP, ..."
-            IEnumerator healCoroutine = base.GameController.GainHP(base.DecisionMaker, (Card c) => c.IsVillainTarget, 1, cardSource: GetCardSource());
+            IEnumerator healCoroutine = base.GameController.GainHP(base.DecisionMaker, (Card c) => IsVillainTarget(c), 1, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(healCoroutine);
