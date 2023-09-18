@@ -49,6 +49,7 @@
     <Compile Include="Estrangular\HorrifyingTransformationCardController.cs" />
     <Compile Include="Estrangular\HumanSnakeUtilityCardController.cs" />
     <Compile Include="Estrangular\RapidEscalationCardController.cs" />
+    <Compile Include="Estrangular\TreacherousAmbushCardController.cs" />
     <Compile Include="Nagual\CleftMaskCardController.cs" />
     <Compile Include="Nagual\ExhaustedRecoveryCardController.cs" />
     <Compile Include="Nagual\JadeAxeCardController.cs" />
