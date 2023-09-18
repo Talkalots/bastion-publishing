@@ -67,7 +67,7 @@ namespace Bastion.Estrangular
 
         public override IEnumerator HumanText()
         {
-            // "{human} The villain target with the lowest HP deals the hero with the highest HP {H - 1} melee damage."
+            // "The villain target with the lowest HP deals the hero with the highest HP {H - 1} melee damage."
             List<Card> lowest = new List<Card>();
             IEnumerator findCoroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.IsVillainTarget, lowest, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)
@@ -79,7 +79,7 @@ namespace Bastion.Estrangular
                 base.GameController.ExhaustCoroutine(findCoroutine);
             }
             Card target = lowest.FirstOrDefault();
-            if (target != null )
+            if (target != null)
             {
                 IEnumerator meleeCoroutine = DealDamageToHighestHP(target, 1, (Card c) => c.IsHero, (Card c) => H - 1, DamageType.Melee);
                 if (base.UseUnityCoroutines)
@@ -95,7 +95,7 @@ namespace Bastion.Estrangular
 
         public override IEnumerator SnakeText()
         {
-            // "{snake} The Minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
+            // "The Minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
             List<Card> lowest = new List<Card>();
             IEnumerator findCoroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.DoKeywordsContain(MinionKeyword), lowest, cardSource: GetCardSource());
             if (base.UseUnityCoroutines)

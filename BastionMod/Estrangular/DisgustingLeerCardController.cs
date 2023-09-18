@@ -27,7 +27,7 @@ namespace Bastion.Estrangular
 
         public override IEnumerator HumanText()
         {
-            // "{human} The hero with the most cards in play cannot use powers until the start of the next villain turn."
+            // "The hero with the most cards in play cannot use powers until the start of the next villain turn."
             List<TurnTaker> results = new List<TurnTaker>();
             IEnumerator findCoroutine = FindHeroWithMostCardsInPlay(results, evenIfCannotDealDamage: true);
             if (base.UseUnityCoroutines)
@@ -58,7 +58,7 @@ namespace Bastion.Estrangular
 
         public override IEnumerator SnakeText()
         {
-            // "{snake} The hero with the most cards in hand cannot play cards until the start of the next villain turn."
+            // "The hero with the most cards in hand cannot play cards until the start of the next villain turn."
             List<TurnTaker> results = new List<TurnTaker>();
             IEnumerator findCoroutine = FindHeroWithMostCardsInHand(results, evenIfCannotDealDamage: true);
             if (base.UseUnityCoroutines)
