@@ -56,6 +56,8 @@
     <Compile Include="Estrangular\LariatEspinosaCardController.cs" />
     <Compile Include="Estrangular\PoachersCardController.cs" />
     <Compile Include="Estrangular\RapidEscalationCardController.cs" />
+    <Compile Include="Estrangular\SpursVillarosaCardController.cs" />
+    <Compile Include="Estrangular\ToroRoccoCardController.cs" />
     <Compile Include="Estrangular\TreacherousAmbushCardController.cs" />
     <Compile Include="Nagual\CleftMaskCardController.cs" />
     <Compile Include="Nagual\ExhaustedRecoveryCardController.cs" />
