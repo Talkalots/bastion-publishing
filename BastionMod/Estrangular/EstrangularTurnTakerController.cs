@@ -32,7 +32,7 @@ namespace Bastion.Estrangular
                 base.GameController.ExhaustCoroutine(apcCoroutine);
             }
             // "... then reveal cards from the top of the villain deck until {H - 2} Minions are revealed, put them into play, and shuffle the other revealed cards back into the deck."
-            IEnumerator minionCoroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.IsMinion, "Minion"), H - 2);
+            IEnumerator minionCoroutine = PutCardsIntoPlay(new LinqCardCriteria((Card c) => c.DoKeywordsContain("minion"), "Minion"), H - 2);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(minionCoroutine);
