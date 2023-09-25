@@ -96,27 +96,42 @@ namespace Bastion.Estrangular
         public override IEnumerator SnakeText()
         {
             // "The Minion with the lowest HP deals [i]Estrangular[/i] 2 projectile damage."
-            List<Card> lowest = new List<Card>();
-            IEnumerator findCoroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.DoKeywordsContain(MinionKeyword), lowest, cardSource: GetCardSource());
-            if (base.UseUnityCoroutines)
+            if (base.CharacterCard.IsFlipped)
             {
-                yield return base.GameController.StartCoroutine(findCoroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(findCoroutine);
-            }
-            Card target = lowest.FirstOrDefault();
-            if (target != null)
-            {
-                IEnumerator projectileCoroutine = DealDamage(target, base.CharacterCard, 2, DamageType.Projectile, cardSource: GetCardSource());
+                List<Card> lowest = new List<Card>();
+                IEnumerator findCoroutine = base.GameController.FindTargetWithLowestHitPoints(1, (Card c) => c.DoKeywordsContain(MinionKeyword), lowest, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
-                    yield return base.GameController.StartCoroutine(projectileCoroutine);
+                    yield return base.GameController.StartCoroutine(findCoroutine);
                 }
                 else
                 {
-                    base.GameController.ExhaustCoroutine(projectileCoroutine);
+                    base.GameController.ExhaustCoroutine(findCoroutine);
+                }
+                Card target = lowest.FirstOrDefault();
+                if (target != null)
+                {
+                    IEnumerator projectileCoroutine = DealDamage(target, base.CharacterCard, 2, DamageType.Projectile, cardSource: GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(projectileCoroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(projectileCoroutine);
+                    }
+                }
+            }
+            else
+            {
+                IEnumerator messageCoroutine = base.GameController.SendMessageAction("[i]Estrangular[/i] is not in play.", Priority.High, GetCardSource(), showCardSource: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(messageCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(messageCoroutine);
                 }
             }
         }
