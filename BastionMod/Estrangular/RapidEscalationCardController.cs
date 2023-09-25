@@ -35,15 +35,30 @@ namespace Bastion.Estrangular
             {
                 base.GameController.ExhaustCoroutine(reshuffleCoroutine);
             }
-            // "Play the top 2 cards of the villain deck."
-            IEnumerator playCoroutine = base.GameController.PlayTopCard(DecisionMaker, base.TurnTakerController, numberOfCards: 2, responsibleTurnTaker: base.TurnTaker, cardSource: GetCardSource());
-            if (base.UseUnityCoroutines)
+            if (ActivateHuman)
             {
-                yield return base.GameController.StartCoroutine(playCoroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(playCoroutine);
+                // "Play the top 2 cards of the villain deck."
+                IEnumerator playCoroutine = base.GameController.PlayTopCard(DecisionMaker, base.TurnTakerController, responsibleTurnTaker: base.TurnTaker, cardSource: GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(playCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(playCoroutine);
+                }
+                if (ActivateHuman)
+                {
+                    IEnumerator playNextCoroutine = base.GameController.PlayTopCard(DecisionMaker, base.TurnTakerController, responsibleTurnTaker: base.TurnTaker, cardSource: GetCardSource());
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(playNextCoroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(playNextCoroutine);
+                    }
+                }
             }
         }
 
