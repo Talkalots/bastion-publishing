@@ -51,15 +51,30 @@ namespace Bastion.Estrangular
 
         public override IEnumerator SnakeText()
         {
-            // "[i]Estrangular[/i] deals the 2 hero targets with the lowest HP {H - 2} toxic damage each."
-            IEnumerator toxicCoroutine = DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => H - 2, DamageType.Toxic, numberOfTargets: 2);
-            if (base.UseUnityCoroutines)
+            if (base.CharacterCard.IsFlipped)
             {
-                yield return base.GameController.StartCoroutine(toxicCoroutine);
+                // "[i]Estrangular[/i] deals the 2 hero targets with the lowest HP {H - 2} toxic damage each."
+                IEnumerator toxicCoroutine = DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => H - 2, DamageType.Toxic, numberOfTargets: 2);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(toxicCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(toxicCoroutine);
+                }
             }
             else
             {
-                base.GameController.ExhaustCoroutine(toxicCoroutine);
+                IEnumerator messageCoroutine = base.GameController.SendMessageAction("[i]Estrangular[/i] is not in play.", Priority.High, GetCardSource(), showCardSource: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(messageCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(messageCoroutine);
+                }
             }
             // "Play the top card of the villain deck."
             IEnumerator playCoroutine = base.GameController.PlayTopCard(DecisionMaker, base.TurnTakerController, responsibleTurnTaker: base.TurnTaker, cardSource: GetCardSource());
