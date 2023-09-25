@@ -49,11 +49,13 @@
     <Compile Include="Estrangular\DisgustingLeerCardController.cs" />
     <Compile Include="Estrangular\EstrangularCharacterCardController.cs" />
     <Compile Include="Estrangular\EstrangularOneShotCardController.cs" />
+    <Compile Include="Estrangular\EstrangularTurnTakerController.cs" />
     <Compile Include="Estrangular\FueledByAngerCardController.cs" />
     <Compile Include="Estrangular\HiredMercsCardController.cs" />
     <Compile Include="Estrangular\HorrifyingTransformationCardController.cs" />
     <Compile Include="Estrangular\HumanSnakeUtilityCardController.cs" />
     <Compile Include="Estrangular\LariatEspinosaCardController.cs" />
+    <Compile Include="Estrangular\MesmerisingPresenceCardController.cs" />
     <Compile Include="Estrangular\PoachersCardController.cs" />
     <Compile Include="Estrangular\RapidEscalationCardController.cs" />
     <Compile Include="Estrangular\ResilientSpiritCardController.cs" />
