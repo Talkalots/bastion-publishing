@@ -64,25 +64,40 @@ namespace Bastion.Estrangular
 
         public override IEnumerator SnakeText()
         {
-            // "[i]Estrangular[/i] deals the hero target with the highest HP {H} melee damage..."
-            IEnumerator meleeCoroutine = DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => H, DamageType.Melee);
-            if (base.UseUnityCoroutines)
+            if (base.CharacterCard.IsFlipped)
             {
-                yield return base.GameController.StartCoroutine(meleeCoroutine);
+                // "[i]Estrangular[/i] deals the hero target with the highest HP {H} melee damage..."
+                IEnumerator meleeCoroutine = DealDamageToHighestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => H, DamageType.Melee);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(meleeCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(meleeCoroutine);
+                }
+                // "... and regains {H * 2} HP."
+                IEnumerator healCoroutine = base.GameController.GainHP(base.CharacterCard, H * 2, cardSource: GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(healCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(healCoroutine);
+                }
             }
             else
             {
-                base.GameController.ExhaustCoroutine(meleeCoroutine);
-            }
-            // "... and regains {H * 2} HP."
-            IEnumerator healCoroutine = base.GameController.GainHP(base.CharacterCard, H*2, cardSource: GetCardSource());
-            if (base.UseUnityCoroutines)
-            {
-                yield return base.GameController.StartCoroutine(healCoroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(healCoroutine);
+                IEnumerator messageCoroutine = base.GameController.SendMessageAction("[i]Estrangular[/i] is not in play.", Priority.High, GetCardSource(), showCardSource: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(messageCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(messageCoroutine);
+                }
             }
             // "Shuffle the villain trash into the villain deck."
             IEnumerator reshuffleCoroutine = base.GameController.ShuffleTrashIntoDeck(base.TurnTakerController, cardSource: GetCardSource());
