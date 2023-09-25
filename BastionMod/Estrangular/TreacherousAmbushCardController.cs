@@ -27,25 +27,43 @@ namespace Bastion.Estrangular
 
         public override IEnumerator HumanText()
         {
-            // "[i]Rico Homem[/i] deals the hero target with the lowest HP 3 projectile damage."
-            IEnumerator projectileCoroutine = DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => 3, DamageType.Projectile);
-            if (base.UseUnityCoroutines)
+            if (!base.CharacterCard.IsFlipped)
             {
-                yield return base.GameController.StartCoroutine(projectileCoroutine);
+                // "[i]Rico Homem[/i] deals the hero target with the lowest HP 3 projectile damage."
+                IEnumerator projectileCoroutine = DealDamageToLowestHP(base.CharacterCard, 1, (Card c) => IsHeroTarget(c), (Card c) => 3, DamageType.Projectile);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(projectileCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(projectileCoroutine);
+                }
             }
             else
             {
-                base.GameController.ExhaustCoroutine(projectileCoroutine);
+                IEnumerator messageCoroutine = base.GameController.SendMessageAction("[i]Rico Homem[/i] is not in play.", Priority.High, GetCardSource(), showCardSource: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(messageCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(messageCoroutine);
+                }
             }
-            // "Each villain target regains {H - 1} HP."
-            IEnumerator healCoroutine = base.GameController.GainHP(DecisionMaker, (Card c) => IsVillainTarget(c), H - 1, cardSource: GetCardSource());
-            if (base.UseUnityCoroutines)
+            if (ActivateHuman)
             {
-                yield return base.GameController.StartCoroutine(healCoroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(healCoroutine);
+                // "Each villain target regains {H - 1} HP."
+                IEnumerator healCoroutine = base.GameController.GainHP(DecisionMaker, (Card c) => IsVillainTarget(c), H - 1, cardSource: GetCardSource());
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(healCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(healCoroutine);
+                }
             }
         }
 
