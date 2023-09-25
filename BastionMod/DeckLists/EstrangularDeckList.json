@@ -77,7 +77,6 @@
 				"At the start of each player's turn, that player may discard their hand to destroy this card."
 			],
 			"icons": [
-				"FlipCard",
 				"ReduceDamageTaken",
 				"StartOfTurnAction",
 				"Discard",
