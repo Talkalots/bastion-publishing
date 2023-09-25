@@ -15,11 +15,11 @@ namespace Bastion.Estrangular
             : base(card, turnTakerController)
         {
             // Show whether redirection has been used this turn
-            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstRicoDamageThisTurn, base.Card.Title + " can no longer redirect damage from [i]Rico Homem[/i] this turn.", base.Card.Title + " has not redirected damage from [i]Rico Homem[/i] this turn.");
+            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstRicoDamageThisTurn, base.Card.Title + " can no longer redirect damage from [i]Rico Homem[/i] this turn.", base.Card.Title + " has not redirected damage from [i]Rico Homem[/i] this turn.").Condition = () => base.Card.IsInPlayAndHasGameText;
             // Show non-villain target with lowest HP
             SpecialStringMaker.ShowNonVillainTargetWithLowestHP();
             // Show whether retaliation has been used this turn
-            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstMonsterDamageThisTurn, base.Card.Title + " has already responded to damage dealt to [i]Estrangular[/i] this turn.", base.Card.Title + " has not responded to damage dealt to [i]Estrangular[/i] this turn.");
+            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstMonsterDamageThisTurn, base.Card.Title + " has already responded to damage dealt to [i]Estrangular[/i] this turn.", base.Card.Title + " has not responded to damage dealt to [i]Estrangular[/i] this turn.").Condition = () => base.Card.IsInPlayAndHasGameText;
         }
 
         protected readonly string FirstRicoDamageThisTurn = "FirstRicoDamageThisTurn";
