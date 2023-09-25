@@ -19,8 +19,8 @@ namespace Bastion.Estrangular
             SpecialStringMaker.ShowListOfCardsAtLocation(base.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain(MinionKeyword), "", singular: "Minion", plural: "Minions"));
             // Show villain target with lowest HP
             SpecialStringMaker.ShowVillainTargetWithLowestHP();
-            // Show hero target with highest HP
-            SpecialStringMaker.ShowHeroTargetWithHighestHP();
+            // Show hero with highest HP
+            SpecialStringMaker.ShowHeroCharacterCardWithHighestHP();
             // Show Minion with lowest HP
             SpecialStringMaker.ShowLowestHP(cardCriteria: new LinqCardCriteria((Card c) => c.DoKeywordsContain(MinionKeyword), "", singular: "Minion", plural: "Minions"));
         }
@@ -81,7 +81,7 @@ namespace Bastion.Estrangular
             Card target = lowest.FirstOrDefault();
             if (target != null)
             {
-                IEnumerator meleeCoroutine = DealDamageToHighestHP(target, 1, (Card c) => c.IsHero, (Card c) => H - 1, DamageType.Melee);
+                IEnumerator meleeCoroutine = DealDamageToHighestHP(target, 1, (Card c) => c.IsHeroCharacterCard, (Card c) => H - 1, DamageType.Melee);
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(meleeCoroutine);
