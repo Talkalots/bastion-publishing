@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Bastion.Estrangular
 {
-    public class SacrificialDaggerCardController : CardController
+    public class SacrificialDaggerCardController : EstrangularRelicCardController
     {
         public SacrificialDaggerCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
@@ -23,8 +23,6 @@ namespace Bastion.Estrangular
         public override void AddTriggers()
         {
             base.AddTriggers();
-            // "This card is immune to damage dealt by villain targets."
-            AddImmuneToDamageTrigger((DealDamageAction dda) => dda.Target == base.Card && dda.DamageSource != null && dda.DamageSource.IsCard && IsVillainTarget(dda.DamageSource.Card));
             // "Increase damage dealt by [i]Estrangular[/i] by 1."
             AddIncreaseDamageTrigger((DealDamageAction dda) => dda.DamageSource != null && dda.DamageSource.IsCard && dda.DamageSource.Card == base.CharacterCard && base.CharacterCard.IsFlipped, (DealDamageAction dda) => 1);
             // "At the end of the villain turn, the villain target with the highest HP deals the hero target with the second highest HP 2 melee damage."

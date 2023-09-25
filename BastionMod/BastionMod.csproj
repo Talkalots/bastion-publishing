@@ -49,6 +49,7 @@
     <Compile Include="Estrangular\DisgustingLeerCardController.cs" />
     <Compile Include="Estrangular\EstrangularCharacterCardController.cs" />
     <Compile Include="Estrangular\EstrangularOneShotCardController.cs" />
+    <Compile Include="Estrangular\EstrangularRelicCardController.cs" />
     <Compile Include="Estrangular\EstrangularTurnTakerController.cs" />
     <Compile Include="Estrangular\FueledByAngerCardController.cs" />
     <Compile Include="Estrangular\HiredMercsCardController.cs" />

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Bastion.Estrangular
 {
-    public class RitualMaskCardController : CardController
+    public class RitualMaskCardController : EstrangularRelicCardController
     {
         public RitualMaskCardController(Card card, TurnTakerController turnTakerController)
             : base(card, turnTakerController)
@@ -20,8 +20,6 @@ namespace Bastion.Estrangular
         public override void AddTriggers()
         {
             base.AddTriggers();
-            // "This card is immune to damage dealt by villain targets."
-            AddImmuneToDamageTrigger((DealDamageAction dda) => dda.Target == base.Card && dda.DamageSource != null && dda.DamageSource.IsCard && IsVillainTarget(dda.DamageSource.Card));
             // "Damage dealt by [i]Estrangular[/i] is irreducible."
             AddMakeDamageIrreducibleTrigger((DealDamageAction dda) => dda.DamageSource != null && dda.DamageSource.IsCard && dda.DamageSource.Card == base.CharacterCard && base.CharacterCard.IsFlipped);
             // "At the end of the villain turn, each player may discard a card. Each hero whose player did not discard a card this way deals themself 1 psychic damage."
