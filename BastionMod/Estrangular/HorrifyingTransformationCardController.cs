@@ -55,15 +55,18 @@ namespace Bastion.Estrangular
                     base.GameController.ExhaustCoroutine(psychicCoroutine);
                 }
             }
-            // "Search the villain deck and trash for {AncientSerpentArmband} and put it into play. If you searched the deck, shuffle it."
-            IEnumerator fetchCoroutine = PlayCardFromLocations(new Location[] { base.TurnTaker.Deck, base.TurnTaker.Trash }, ArmbandIdentifier);
-            if (base.UseUnityCoroutines)
+            if (ActivateHuman)
             {
-                yield return base.GameController.StartCoroutine(fetchCoroutine);
-            }
-            else
-            {
-                base.GameController.ExhaustCoroutine(fetchCoroutine);
+                // "Search the villain deck and trash for {AncientSerpentArmband} and put it into play. If you searched the deck, shuffle it."
+                IEnumerator fetchCoroutine = PlayCardFromLocations(new Location[] { base.TurnTaker.Deck, base.TurnTaker.Trash }, ArmbandIdentifier);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(fetchCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(fetchCoroutine);
+                }
             }
         }
 
