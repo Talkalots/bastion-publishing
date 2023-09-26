@@ -59,21 +59,62 @@ namespace Bastion.Estrangular
 
         private IEnumerator SnakeCheckCardsInPlayResponse(PhaseChangeAction pca)
         {
-            List<TurnTaker> storedResults = new List<TurnTaker>();
-            IEnumerator findCoroutine = FindHeroWithFewestCardsInPlay(storedResults);
-            if (base.UseUnityCoroutines)
+            // FindHeroWithFewestCardsInPlay automatically asks the players to resolve a tie, regardless of whether that tie includes the TurnTaker we care about
+            // What we actually need to do is find out whether the active player can count as the player with the fewest cards in play
+            bool match = false;
+            Func<TurnTaker, int> cardsInPlay = (TurnTaker tt) => tt.GetCardsWhere((Card c) => c.IsInPlay).Count();
+            IEnumerable<TurnTaker> sortedHeroes = FindTurnTakersWhere((TurnTaker tt) => tt.IsPlayer && !tt.IsIncapacitatedOrOutOfGame).OrderBy(cardsInPlay);
+            int minNumberOfCards = cardsInPlay(sortedHeroes.ElementAt(0));
+            //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: base.Game.ActiveTurnTaker: " + base.Game.ActiveTurnTaker.Name);
+            //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: minNumberOfCards: " + minNumberOfCards);
+            //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: cardsInPlay(" + base.Game.ActiveTurnTaker.Name + "): " + cardsInPlay(base.Game.ActiveTurnTaker));
+            if (cardsInPlay(base.Game.ActiveTurnTaker) == minNumberOfCards)
             {
-                yield return base.GameController.StartCoroutine(findCoroutine);
+                //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: active player's number of cards matches minNumberOfCards");
+                IEnumerable<TurnTaker> minHeroes = FindTurnTakersWhere((TurnTaker tt) => tt.IsPlayer && cardsInPlay(tt) == minNumberOfCards);
+                //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: minHeroes.Count(): " + minHeroes.Count());
+                if (minHeroes.Count() > 1)
+                {
+                    //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: minHeroes.Count() > 1");
+                    // The active player is one of multiple players with the fewest cards in play
+                    // Ask the players which one counts as the fewest
+                    List<TurnTaker> storedResults = new List<TurnTaker>();
+                    IEnumerator findCoroutine = FindHeroWithFewestCardsInPlay(storedResults);
+                    if (base.UseUnityCoroutines)
+                    {
+                        yield return base.GameController.StartCoroutine(findCoroutine);
+                    }
+                    else
+                    {
+                        base.GameController.ExhaustCoroutine(findCoroutine);
+                    }
+                    if (storedResults.Count > 0)
+                    {
+                        TurnTaker fewestCards = storedResults.First();
+                        match = fewestCards == base.Game.ActiveTurnTaker;
+                    }
+                }
+                else if (minHeroes.Count() == 1)
+                {
+                    //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: minHeroes.Count() == 1");
+                    // The active TurnTaker is the only player with the fewest cards in play
+                    match = true;
+                }
             }
-            else
+            //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: match: " + match);
+            SetCardProperty(ActiveHeroHasFewestCardsInPlay, match);
+            if (match)
             {
-                base.GameController.ExhaustCoroutine(findCoroutine);
-            }
-            if (storedResults.Count > 0)
-            {
-                TurnTaker fewestCards = storedResults.First();
-                bool match = fewestCards == base.Game.ActiveTurnTaker;
-                SetCardProperty(ActiveHeroHasFewestCardsInPlay, match);
+                //Log.Debug("MesmerisingPresence.SnakeCheckCardsInPlayResponse: " + base.Game.ActiveTurnTaker.Name + " is the hero with the fewest cards in play");
+                IEnumerator messageCoroutine = base.GameController.SendMessageAction(base.Game.ActiveTurnTaker.Name + " is the hero with the fewest cards in play, and can only use 1 power during their turn.", Priority.High, GetCardSource(), showCardSource: true);
+                if (base.UseUnityCoroutines)
+                {
+                    yield return base.GameController.StartCoroutine(messageCoroutine);
+                }
+                else
+                {
+                    base.GameController.ExhaustCoroutine(messageCoroutine);
+                }
             }
         }
 
