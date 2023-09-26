@@ -52,7 +52,7 @@ namespace Bastion.Estrangular
                 List<Card> relevant = new List<Card>();
                 relevant.Add(base.Card);
                 HeroTurnTakerController player = FindHeroTurnTakerController(tt.ToHero());
-                YesNoDecision choice = new YesNoDecision(base.GameController, player, SelectionType.DiscardHand, associatedCards: relevant, cardSource: GetCardSource());
+                YesNoDecision choice = new YesNoDecision(base.GameController, player, SelectionType.Custom, associatedCards: relevant, cardSource: GetCardSource());
                 IEnumerator chooseCoroutine = base.GameController.MakeDecisionAction(choice);
                 if (base.UseUnityCoroutines)
                 {
@@ -85,6 +85,11 @@ namespace Bastion.Estrangular
                     }
                 }
             }
+        }
+
+        public override CustomDecisionText GetCustomDecisionText(IDecision decision)
+        {
+            return new CustomDecisionText("Do you want to discard your hand?", "selecting whether to discard their hand", "Vote for whether " + decision.HeroTurnTakerController.Name + " should discard their hand", "discard your hand");
         }
     }
 }
