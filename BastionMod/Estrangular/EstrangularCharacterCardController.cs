@@ -113,6 +113,21 @@ namespace Bastion.Estrangular
             {
                 base.GameController.ExhaustCoroutine(baseCoroutine);
             }
+            // Set appropriate max HP
+            int newMaxHP = base.Card.Definition.HitPoints.Value;
+            if (base.Card.IsFlipped)
+            {
+                newMaxHP = base.Card.Definition.FlippedHitPoints.Value;
+            }
+            IEnumerator maxCoroutine = base.GameController.ChangeMaximumHP(base.Card, newMaxHP, base.Card.HitPoints.Value > newMaxHP, GetCardSource());
+            if (base.UseUnityCoroutines)
+            {
+                yield return base.GameController.StartCoroutine(maxCoroutine);
+            }
+            else
+            {
+                base.GameController.ExhaustCoroutine(maxCoroutine);
+            }
             // Back side: "When the villain character flips to this side, he regains {H * 5} HP."
             if (base.Card.IsFlipped)
             {
