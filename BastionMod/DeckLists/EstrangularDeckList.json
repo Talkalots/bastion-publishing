@@ -52,7 +52,6 @@
 			"flippedIcons": [
 				"GainHP",
 				"StartAndEndOfTurnAction",
-				"FlipCard",
 				"DealDamageMelee",
 				"DealDamageInfernal"
 			],
