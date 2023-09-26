@@ -19,7 +19,7 @@ namespace Bastion.Estrangular
             // Show location of Ancient Serpent Armband
             SpecialStringMaker.ShowLocationOfCards(new LinqCardCriteria((Card c) => c.Identifier == ArmbandIdentifier, "Ancient Serpent Armband", useCardsSuffix: false));
             // Show list of targets with 1 HP
-            SpecialStringMaker.ShowListOfCardsInPlay(new LinqCardCriteria((Card c) => c.IsTarget && c.HitPoints.HasValueEqualTo(1), "with 1 HP", false, true, "target", "targets"));
+            SpecialStringMaker.ShowListOfCards(new LinqCardCriteria((Card c) => c.IsTarget && c.HitPoints.HasValueEqualTo(1) && c.IsInPlayAndHasGameText, "", useCardsSuffix: false, useCardsPrefix: false, singular: "target with 1 HP in play", plural: "targets with 1 HP in play"));
         }
 
         public const string ArmbandIdentifier = "AncientSerpentArmband";
