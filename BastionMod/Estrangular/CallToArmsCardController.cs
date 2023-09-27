@@ -16,7 +16,7 @@ namespace Bastion.Estrangular
         {
             HasIconless = true;
             // Show list of Minions in the villain trash
-            SpecialStringMaker.ShowListOfCardsAtLocation(base.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain(MinionKeyword), "", singular: "Minion", plural: "Minions"));
+            SpecialStringMaker.ShowListOfCardsAtLocation(base.TurnTaker.Trash, new LinqCardCriteria((Card c) => c.DoKeywordsContain(MinionKeyword), "Minion"));
             // Show villain target with lowest HP
             SpecialStringMaker.ShowVillainTargetWithLowestHP();
             // Show hero with highest HP
