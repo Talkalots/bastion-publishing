@@ -15,7 +15,7 @@ namespace Bastion.Estrangular
             : base(card, turnTakerController)
         {
             // Show whether damage has been dealt by a villain target yet this turn
-            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstVillainDamageThisTurn, "A villain target has already dealt damage this turn since " + base.Card.Title + " entered play.", "No villain targets have dealt damage this turn since " + base.Card.Title + "entered play.").Condition = () => base.Card.IsInPlayAndHasGameText;
+            SpecialStringMaker.ShowHasBeenUsedThisTurn(FirstVillainDamageThisTurn, "A villain target has already dealt damage this turn since " + base.Card.Title + " entered play.", "No villain targets have dealt damage this turn since " + base.Card.Title + " entered play.").Condition = () => base.Card.IsInPlayAndHasGameText;
         }
 
         protected readonly string FirstVillainDamageThisTurn = "FirstVillainDamageThisTurn";
