@@ -38,7 +38,7 @@ namespace Bastion.Estrangular
 
         private IEnumerator IfHumanRedirectResponse(DealDamageAction dda)
         {
-            SetCardPropertyToTrueIfRealAction(FirstRicoDamageThisTurn, gameAction: dda);
+            SetCardPropertyToTrueIfRealAction(FirstRicoDamageThisTurn);
             if (ActivateHuman)
             {
                 // "... redirect that damage to the non-villain target with the lowest HP."
@@ -57,7 +57,7 @@ namespace Bastion.Estrangular
 
         private IEnumerator IfSnakeRetaliateResponse(DealDamageAction dda)
         {
-            SetCardPropertyToTrueIfRealAction(FirstMonsterDamageThisTurn, gameAction: dda);
+            SetCardPropertyToTrueIfRealAction(FirstMonsterDamageThisTurn);
             if (ActivateSnake)
             {
                 if (dda.DamageSource != null && dda.DamageSource.IsTarget)
