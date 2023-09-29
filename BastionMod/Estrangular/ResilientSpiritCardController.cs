@@ -32,7 +32,7 @@ namespace Bastion.Estrangular
             AddTrigger((DealDamageAction dda) => !HasBeenSetToTrueThisTurn(FirstRicoDamageThisTurn) && dda.Target == base.CharacterCard && !base.CharacterCard.IsFlipped, IfHumanRedirectResponse, TriggerType.RedirectDamage, TriggerTiming.Before);
             AddAfterLeavesPlayAction((GameAction ga) => ResetFlagAfterLeavesPlay(FirstRicoDamageThisTurn), TriggerType.Hidden);
             // "{snake} The first time [i]Estrangular[/i] would be dealt damage each turn, he deals the source of that damage {H - 2} melee damage."
-            AddTrigger((DealDamageAction dda) => !HasBeenSetToTrueThisTurn(FirstMonsterDamageThisTurn) && dda.Target == base.CharacterCard && base.CharacterCard.IsFlipped, IfSnakeRetaliateResponse, TriggerType.DealDamage, TriggerTiming.Before);
+            AddTrigger((DealDamageAction dda) => !HasBeenSetToTrueThisTurn(FirstMonsterDamageThisTurn) && !dda.IsPretend && dda.Target == base.CharacterCard && base.CharacterCard.IsFlipped, IfSnakeRetaliateResponse, TriggerType.DealDamage, TriggerTiming.Before);
             AddAfterLeavesPlayAction((GameAction ga) => ResetFlagAfterLeavesPlay(FirstMonsterDamageThisTurn), TriggerType.Hidden);
         }
 
