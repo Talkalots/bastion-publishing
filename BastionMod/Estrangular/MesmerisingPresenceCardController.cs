@@ -29,12 +29,12 @@ namespace Bastion.Estrangular
             AddRedirectDamageTrigger((DealDamageAction dda) => ActivateHuman && IsVillainTarget(dda.Target) && dda.Target != base.CharacterCard && !base.CharacterCard.IsFlipped, () => base.CharacterCard);
             // "{snake} The hero with the fewest cards in play can only use 1 power during their turn."
             // After consult with designer, implemented as:
-            // "At the start of each player's turn, if that player has the fewest cards in play, their hero cannot use more than 1 power this turn as long as this card is in play and {snake} effects are active."
+            // "At the start of each player's turn, if that player has the fewest cards in play, that player cannot use more than 1 power this turn as long as this card is in play and {snake} effects are active."
             // Start of each hero turn: if {snake} effects are active, determine who the hero with the fewest cards in play is, save result
             AddStartOfTurnTrigger((TurnTaker tt) => tt.IsHero, SnakeCheckCardsInPlayResponse, TriggerType.Other, additionalCriteria: (PhaseChangeAction pca) => ActivateSnake);
             AddAfterLeavesPlayAction((GameAction ga) => ResetFlagAfterLeavesPlay(ActiveHeroHasFewestCardsInPlay), TriggerType.Hidden);
             // If the active hero has the fewest cards in play and {snake} effects are active and the active hero has used as many powers as they have hero character cards this turn, then the active hero can't use powers
-            CannotUsePowers((TurnTakerController ttc) => HasBeenSetToTrueThisTurn(ActiveHeroHasFewestCardsInPlay) && ttc.IsPlayer && ttc.TurnTaker == base.Game.ActiveTurnTaker && ActivateSnake && GetNumberOfPowersUsedThisTurn(ttc.ToHero()) >= ttc.CharacterCardControllers.Count(), (HeroCharacterCardController hcc) => HasBeenSetToTrueThisTurn(ActiveHeroHasFewestCardsInPlay) && hcc.TurnTaker.IsPlayer && hcc.TurnTaker == base.Game.ActiveTurnTaker && ActivateSnake && GetNumberOfPowersUsedThisTurn(hcc) > 0);
+            CannotUsePowers((TurnTakerController ttc) => HasBeenSetToTrueThisTurn(ActiveHeroHasFewestCardsInPlay) && ttc.IsPlayer && ttc.TurnTaker == base.Game.ActiveTurnTaker && ActivateSnake && GetNumberOfPowersUsedThisTurn(ttc.ToHero()) > 0, (HeroCharacterCardController hcc) => HasBeenSetToTrueThisTurn(ActiveHeroHasFewestCardsInPlay) && hcc.TurnTaker.IsPlayer && hcc.TurnTaker == base.Game.ActiveTurnTaker && ActivateSnake && GetNumberOfPowersUsedThisTurn(base.GameController.FindHeroTurnTakerController(hcc.TurnTaker.ToHero())) > 0);
             // If this causes a player to skip their Use Power phase, show a message to that effect
             AddTrigger((PhaseChangeAction pca) => base.GameController.ActiveTurnPhase != null && base.GameController.ActiveTurnPhase.IsUsePower && pca.FromPhase.IsUsePower && pca.FromPhase.TurnTaker.IsPlayer && base.GameController.ActiveTurnPhase.TurnTaker == pca.FromPhase.TurnTaker && base.GameController.GetPhaseActionCountForTurnPhase(pca.FromPhase) > 0 && ActivateSnake && HasBeenSetToTrueThisTurn(ActiveHeroHasFewestCardsInPlay) && GetNumberOfPowersUsedThisTurn(FindHeroTurnTakerController(pca.FromPhase.TurnTaker.ToHero())) > 0, ShowMessageResponse, TriggerType.ShowMessage, TriggerTiming.Before);
         }
@@ -120,7 +120,7 @@ namespace Bastion.Estrangular
 
         private IEnumerator ShowMessageResponse(PhaseChangeAction pca)
         {
-            yield return base.GameController.SendMessageAction(base.Card.Title + " prevents " + pca.FromPhase.TurnTaker + " from using any more powers this turn. Skipping the rest of their Use Power phase.", Priority.High, GetCardSource(), showCardSource: true);
+            yield return base.GameController.SendMessageAction(base.Card.Title + " prevents " + pca.FromPhase.TurnTaker.Name + " from using any more powers this turn. Skipping the rest of their Use Power phase.", Priority.High, GetCardSource(), showCardSource: true);
         }
     }
 }
