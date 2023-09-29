@@ -42,8 +42,16 @@ namespace Bastion.Estrangular
         public override IEnumerator Play()
         {
             // If this card enters play on a hero turn and {snake} effects are active, immediately check whether the active hero has the fewest cards in play
+            /*Log.Debug("MesmerisingPresence.Play: ActivateSnake: " + ActivateSnake.ToString());
+            Log.Debug("MesmerisingPresence.Play: base.Game.ActiveTurnTaker != null: " + (base.Game.ActiveTurnTaker != null).ToString());
+            if (base.Game.ActiveTurnTaker != null)
+            {
+                Log.Debug("MesmerisingPresence.Play: base.Game.ActiveTurnTaker: " + base.Game.ActiveTurnTaker.Name);
+                Log.Debug("MesmerisingPresence.Play: base.Game.ActiveTurnTaker.IsHero: " + base.Game.ActiveTurnTaker.IsHero.ToString());
+            }*/
             if (ActivateSnake && base.Game.ActiveTurnTaker != null && base.Game.ActiveTurnTaker.IsHero)
             {
+                //Log.Debug("MesmerisingPresence.Play: calling SnakeCheckCardsInPlayResponse");
                 IEnumerator checkCoroutine = SnakeCheckCardsInPlayResponse(null);
                 if (base.UseUnityCoroutines)
                 {
