@@ -30,7 +30,7 @@ namespace Bastion.Estrangular
         private IEnumerator HumanFireResponse(PhaseChangeAction pca)
         {
             // "... [i]Arsonist[/i] deals the {H - 1} non-villain targets with the highest HP 2 fire damage each."
-            IEnumerator fireCoroutine = DealDamageToHighestHP(base.Card, 1, (Card c) => !IsVillainTarget(c), (Card c) => 2, DamageType.Fire, numberOfTargets: () => H - 1);
+            IEnumerator fireCoroutine = DealDamageToHighestHP(base.Card, 1, (Card c) => !IsVillainTarget(c), (Card c) => 2, DamageType.Fire, numberOfTargets: HumanTargetsCount);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(fireCoroutine);
@@ -38,6 +38,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(fireCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return H - 1;
+            }
+            else
+            {
+                return 0;
             }
         }
 

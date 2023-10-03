@@ -45,7 +45,7 @@ namespace Bastion.Estrangular
             Card target = highest.FirstOrDefault();
             if (target != null)
             {
-                IEnumerator psychicCoroutine = DealDamage(target, (Card c) => c.IsHero, 1, DamageType.Psychic);
+                IEnumerator psychicCoroutine = DealDamage(target, (Card c) => c.IsHero, (Card c) => 1, DamageType.Psychic, dynamicNumberOfTargets: HumanTargetsCount);
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(psychicCoroutine);
@@ -91,6 +91,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(destroyCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return 999;
+            }
+            else
+            {
+                return 0;
             }
         }
     }

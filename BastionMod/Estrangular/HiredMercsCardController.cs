@@ -55,7 +55,7 @@ namespace Bastion.Estrangular
                 }
             }
             // Deal damage to selected characters
-            IEnumerator projectileCoroutine = DealDamage(base.Card, (Card c) => storedResultsCharacter.Contains(c), 2, DamageType.Projectile);
+            IEnumerator projectileCoroutine = DealDamage(base.Card, (Card c) => storedResultsCharacter.Contains(c), (Card c) => 2, DamageType.Projectile, dynamicNumberOfTargets: HumanTargetsCount);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(projectileCoroutine);
@@ -63,6 +63,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(projectileCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return 999;
+            }
+            else
+            {
+                return 0;
             }
         }
 

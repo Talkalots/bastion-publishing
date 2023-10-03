@@ -29,7 +29,7 @@ namespace Bastion.Estrangular
         private IEnumerator HumanRevengeResponse(DestroyCardAction dca)
         {
             // "... [i]Rico Homem[/i] deals each hero target 1 projectile damage."
-            IEnumerator projectileCoroutine = DealDamage(base.CharacterCard, (Card c) => IsHeroTarget(c), 1, DamageType.Projectile);
+            IEnumerator projectileCoroutine = DealDamage(base.CharacterCard, (Card c) => IsHeroTarget(c), (Card c) => 1, DamageType.Projectile, dynamicNumberOfTargets: HumanTargetsCount);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(projectileCoroutine);
@@ -37,6 +37,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(projectileCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return 999;
+            }
+            else
+            {
+                return 0;
             }
         }
     }

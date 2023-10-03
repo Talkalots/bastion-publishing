@@ -32,7 +32,7 @@ namespace Bastion.Estrangular
         private IEnumerator HumanProjectileResponse(PhaseChangeAction pca)
         {
             // "... {ContrabandAPC} deals the {H - 2} non-Villain targets with the highest HP 3 projectile damage each."
-            IEnumerator projectileCoroutine = DealDamageToHighestHP(base.Card, 1, (Card c) => !IsVillainTarget(c), (Card c) => 3, DamageType.Projectile, numberOfTargets: () => H - 2);
+            IEnumerator projectileCoroutine = DealDamageToHighestHP(base.Card, 1, (Card c) => !IsVillainTarget(c), (Card c) => 3, DamageType.Projectile, numberOfTargets: HumanTargetsCount);
             if (base.UseUnityCoroutines)
             {
                 yield return base.GameController.StartCoroutine(projectileCoroutine);
@@ -40,6 +40,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(projectileCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return H - 2;
+            }
+            else
+            {
+                return 0;
             }
         }
 

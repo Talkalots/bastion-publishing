@@ -55,7 +55,7 @@ namespace Bastion.Estrangular
             if (ActivateHuman)
             {
                 // "Each villain target regains {H - 1} HP."
-                IEnumerator healCoroutine = base.GameController.GainHP(DecisionMaker, (Card c) => IsVillainTarget(c), H - 1, cardSource: GetCardSource());
+                IEnumerator healCoroutine = base.GameController.GainHP(DecisionMaker, (Card c) => IsVillainTarget(c), (Card c) => H - 1, numberOfCardsToHeal: HumanTargetsCount, cardSource: GetCardSource());
                 if (base.UseUnityCoroutines)
                 {
                     yield return base.GameController.StartCoroutine(healCoroutine);
@@ -103,6 +103,18 @@ namespace Bastion.Estrangular
             else
             {
                 base.GameController.ExhaustCoroutine(playCoroutine);
+            }
+        }
+
+        private int HumanTargetsCount()
+        {
+            if (ActivateHuman)
+            {
+                return 999;
+            }
+            else
+            {
+                return 0;
             }
         }
     }
