@@ -73,7 +73,7 @@
 			"body": [
 				"When this card enters play, flip the villain character card to [i]Estrangular, Vision Serpent Incarnate.[/i]",
 				"Reduce all non-melee non-projectile damage dealt to [i]Estrangular[/i] by 2.",
-				"At the start of each player's turn, that player may discard their hand to destroy this card."
+				"At the start of each player's turn, that player may discard their hand. If they discarded at least 1 card this way, destroy this card."
 			],
 			"icons": [
 				"ReduceDamageTaken",

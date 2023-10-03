@@ -22,7 +22,7 @@ namespace Bastion.Estrangular
             base.AddTriggers();
             // "Reduce all non-melee non-projectile damage dealt to [i]Estrangular[/i] by 2."
             AddReduceDamageTrigger((DealDamageAction dda) => dda.Target == base.CharacterCard && base.CharacterCard.IsFlipped && !(dda.DamageType == DamageType.Melee || dda.DamageType == DamageType.Projectile), (DealDamageAction dda) => 2);
-            // "At the start of each player's turn, that player may discard their hand to destroy this card."
+            // "At the start of each player's turn, that player may discard their hand. If they discarded at least 1 card this way, destroy this card."
             AddStartOfTurnTrigger((TurnTaker tt) => tt.IsHero && !tt.IsIncapacitatedOrOutOfGame, MayDiscardHandToDestructResponse, new TriggerType[] { TriggerType.DiscardCard, TriggerType.DestroySelf });
         }
 
@@ -45,7 +45,7 @@ namespace Bastion.Estrangular
 
         private IEnumerator MayDiscardHandToDestructResponse(PhaseChangeAction pca)
         {
-            // "... that player may discard their hand to destroy this card."
+            // "... that player may discard their hand."
             TurnTaker tt = pca.ToPhase.TurnTaker;
             if (!tt.IsIncapacitatedOrOutOfGame)
             {
@@ -64,7 +64,8 @@ namespace Bastion.Estrangular
                 }
                 if (choice != null && choice.Answer.HasValue && choice.Answer.Value)
                 {
-                    IEnumerator discardCoroutine = base.GameController.DiscardHand(player, false, null, base.TurnTaker, GetCardSource());
+                    List<DiscardCardAction> discardResults = new List<DiscardCardAction>();
+                    IEnumerator discardCoroutine = base.GameController.DiscardHand(player, false, discardResults, base.TurnTaker, GetCardSource());
                     if (base.UseUnityCoroutines)
                     {
                         yield return base.GameController.StartCoroutine(discardCoroutine);
@@ -73,15 +74,30 @@ namespace Bastion.Estrangular
                     {
                         base.GameController.ExhaustCoroutine(discardCoroutine);
                     }
-                    // NOTE: ask John whether discarding an empty hand should still do this
-                    IEnumerator destructCoroutine = DestroyThisCardResponse(null);
-                    if (base.UseUnityCoroutines)
+                    // "If they discarded at least 1 card this way, destroy this card."
+                    if (discardResults.Any((DiscardCardAction dca) => dca != null && dca.WasCardDiscarded))
                     {
-                        yield return base.GameController.StartCoroutine(destructCoroutine);
+                        IEnumerator destructCoroutine = DestroyThisCardResponse(null);
+                        if (base.UseUnityCoroutines)
+                        {
+                            yield return base.GameController.StartCoroutine(destructCoroutine);
+                        }
+                        else
+                        {
+                            base.GameController.ExhaustCoroutine(destructCoroutine);
+                        }
                     }
                     else
                     {
-                        base.GameController.ExhaustCoroutine(destructCoroutine);
+                        IEnumerator messageCoroutine = base.GameController.SendMessageAction("No cards were discarded, so " + base.Card.Title + " is not destroyed.", Priority.High, GetCardSource(), showCardSource: true);
+                        if (base.UseUnityCoroutines)
+                        {
+                            yield return base.GameController.StartCoroutine(messageCoroutine);
+                        }
+                        else
+                        {
+                            base.GameController.ExhaustCoroutine(messageCoroutine);
+                        }
                     }
                 }
             }
@@ -89,7 +105,7 @@ namespace Bastion.Estrangular
 
         public override CustomDecisionText GetCustomDecisionText(IDecision decision)
         {
-            return new CustomDecisionText("Do you want to discard your hand?", "selecting whether to discard their hand", "Vote for whether " + decision.HeroTurnTakerController.Name + " should discard their hand", "discard your hand");
+            return new CustomDecisionText("Do you want to discard your hand?", "choosing whether to discard their hand", "Vote for whether " + decision.HeroTurnTakerController.Name + " should discard their hand", "discard your hand");
         }
     }
 }
