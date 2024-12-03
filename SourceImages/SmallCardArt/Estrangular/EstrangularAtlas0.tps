@@ -26,7 +26,7 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <false/>
+        <true/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
@@ -34,7 +34,7 @@
         <key>dataFormat</key>
         <string>json</string>
         <key>textureFileName</key>
-        <filename>../../Resources/Atlas/SetupGame0.png</filename>
+        <filename>../../../Resources/Atlas/EstrangularAtlas0.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrQualityLevel</key>
@@ -44,9 +44,9 @@
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
         <key>etc1QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>etc2QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>ditherType</key>
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../Resources/Atlas/SetupGame0.json</filename>
+                <filename>../../../Resources/Atlas/EstrangularAtlas0.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,8 +173,43 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">AncientSerpentArmband.png</key>
+            <key type="filename">Arsonist.png</key>
+            <key type="filename">CallToArms.png</key>
+            <key type="filename">ContrabandAPC.png</key>
+            <key type="filename">DeadlyPersistence.png</key>
+            <key type="filename">DisgustingLeer.png</key>
+            <key type="filename">FueledByAnger.png</key>
+            <key type="filename">HiredMercs.png</key>
+            <key type="filename">HorrifyingTransformation.png</key>
+            <key type="filename">LariatEspinosa.png</key>
+            <key type="filename">MesmerisingPresence.png</key>
+            <key type="filename">Poachers.png</key>
+            <key type="filename">RapidEscalation.png</key>
+            <key type="filename">ResilientSpirit.png</key>
+            <key type="filename">RitualMask.png</key>
+            <key type="filename">SacrificialDagger.png</key>
+            <key type="filename">SpursVillarosa.png</key>
+            <key type="filename">ToroRocco.png</key>
+            <key type="filename">TreacherousAmbush.png</key>
+            <key type="filename">VipersVenom.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,50,128,99</rect>
+                <key>scale9Paddings</key>
+                <rect>64,50,128,99</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">EstrangularCharacter.png</key>
-            <key type="filename">NagualCharacter.png</key>
+            <key type="filename">EstrangularCharacterBack.png</key>
+            <key type="filename">EstrangularDeckBack.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -196,7 +231,29 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>.</filename>
+                    <filename>AncientSerpentArmband.png</filename>
+                    <filename>Arsonist.png</filename>
+                    <filename>CallToArms.png</filename>
+                    <filename>ContrabandAPC.png</filename>
+                    <filename>DeadlyPersistence.png</filename>
+                    <filename>DisgustingLeer.png</filename>
+                    <filename>EstrangularCharacter.png</filename>
+                    <filename>EstrangularCharacterBack.png</filename>
+                    <filename>EstrangularDeckBack.png</filename>
+                    <filename>FueledByAnger.png</filename>
+                    <filename>HiredMercs.png</filename>
+                    <filename>HorrifyingTransformation.png</filename>
+                    <filename>LariatEspinosa.png</filename>
+                    <filename>MesmerisingPresence.png</filename>
+                    <filename>Poachers.png</filename>
+                    <filename>RapidEscalation.png</filename>
+                    <filename>ResilientSpirit.png</filename>
+                    <filename>RitualMask.png</filename>
+                    <filename>SacrificialDagger.png</filename>
+                    <filename>SpursVillarosa.png</filename>
+                    <filename>ToroRocco.png</filename>
+                    <filename>TreacherousAmbush.png</filename>
+                    <filename>VipersVenom.png</filename>
                 </array>
             </struct>
         </map>

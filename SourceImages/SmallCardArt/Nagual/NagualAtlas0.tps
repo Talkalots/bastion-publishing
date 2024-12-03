@@ -26,7 +26,7 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <false/>
+        <true/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
@@ -34,7 +34,7 @@
         <key>dataFormat</key>
         <string>json</string>
         <key>textureFileName</key>
-        <filename>../../Resources/Atlas/SetupGame0.png</filename>
+        <filename>../../../Resources/Atlas/NagualAtlas0.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrQualityLevel</key>
@@ -44,9 +44,9 @@
         <key>basisUniversalQualityLevel</key>
         <uint>2</uint>
         <key>etc1QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>etc2QualityLevel</key>
-        <uint>40</uint>
+        <uint>70</uint>
         <key>dxtCompressionMode</key>
         <enum type="SettingsBase::DxtCompressionMode">DXT_PERCEPTUAL</enum>
         <key>ditherType</key>
@@ -124,7 +124,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../Resources/Atlas/SetupGame0.json</filename>
+                <filename>../../../Resources/Atlas/NagualAtlas0.json</filename>
             </struct>
         </map>
         <key>multiPackMode</key>
@@ -173,8 +173,39 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">EstrangularCharacter.png</key>
+            <key type="filename">CleftMask.png</key>
+            <key type="filename">ExhaustedRecovery.png</key>
+            <key type="filename">JadeAxe.png</key>
+            <key type="filename">JaguarPelt.png</key>
+            <key type="filename">LashingClaws.png</key>
+            <key type="filename">MoonlightDance.png</key>
+            <key type="filename">Pounce.png</key>
+            <key type="filename">PredatorsCamouflage.png</key>
+            <key type="filename">PrideAndFerocity.png</key>
+            <key type="filename">ProwlUnseen.png</key>
+            <key type="filename">ReplenishedByRain.png</key>
+            <key type="filename">RisingStrength.png</key>
+            <key type="filename">ScourTheLand.png</key>
+            <key type="filename">ShamansCalendar.png</key>
+            <key type="filename">Shapeshifting.png</key>
+            <key type="filename">ViciousTeeth.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>64,50,128,99</rect>
+                <key>scale9Paddings</key>
+                <rect>64,50,128,99</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">NagualCharacter.png</key>
+            <key type="filename">NagualCharacterBack.png</key>
+            <key type="filename">NagualDeckBack.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -196,7 +227,25 @@
             <struct type="SpriteSheet">
                 <key>files</key>
                 <array>
-                    <filename>.</filename>
+                    <filename>CleftMask.png</filename>
+                    <filename>ExhaustedRecovery.png</filename>
+                    <filename>JadeAxe.png</filename>
+                    <filename>JaguarPelt.png</filename>
+                    <filename>LashingClaws.png</filename>
+                    <filename>MoonlightDance.png</filename>
+                    <filename>NagualCharacter.png</filename>
+                    <filename>NagualCharacterBack.png</filename>
+                    <filename>NagualDeckBack.png</filename>
+                    <filename>Pounce.png</filename>
+                    <filename>PredatorsCamouflage.png</filename>
+                    <filename>PrideAndFerocity.png</filename>
+                    <filename>ProwlUnseen.png</filename>
+                    <filename>ReplenishedByRain.png</filename>
+                    <filename>RisingStrength.png</filename>
+                    <filename>ScourTheLand.png</filename>
+                    <filename>ShamansCalendar.png</filename>
+                    <filename>Shapeshifting.png</filename>
+                    <filename>ViciousTeeth.png</filename>
                 </array>
             </struct>
         </map>

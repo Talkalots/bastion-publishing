@@ -1,11 +1,11 @@
 {
    "title":"Bastion Publishing",
    "author":"JohnTBapt",
-   "description":"Summary goes here",
+   "description":"A collection of heroes, villains and environment for Sentinels of the Multiverse.",
    "namespace":"Bastion",
    "dll":"BastionComics.dll",
    "version":"0.5",
-   "color":"000000",
+   "color":"71797E",
    "manualTags":[],
    "decks":{
 		"heroes": [
@@ -18,8 +18,9 @@
    "variants":{
    },
    "credits":[
-   "Credits can have many lines.",
-   "This line is one of them.",
-   "This line is another one of them."
+   "Nagual (Character Concept, Storyline: Hateful Darkblack)",
+   "Coding and Digital Development: Bart_KF",
+   "Art: John Ellis",
+   "Playtesting: insomn, Tesla_Coil, bobbertoreilly, and a lot of the folks at the Sentinels Custom Playtesting Discord."
    ]
 }

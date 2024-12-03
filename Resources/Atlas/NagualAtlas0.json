@@ -1,0 +1,164 @@
+{"frames": {
+
+"CleftMask.png":
+{
+	"frame": {"x":0,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ExhaustedRecovery.png":
+{
+	"frame": {"x":259,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"JadeAxe.png":
+{
+	"frame": {"x":518,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"JaguarPelt.png":
+{
+	"frame": {"x":777,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"LashingClaws.png":
+{
+	"frame": {"x":1036,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"MoonlightDance.png":
+{
+	"frame": {"x":1295,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"NagualCharacter.png":
+{
+	"frame": {"x":518,"y":402,"w":183,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":256},
+	"sourceSize": {"w":183,"h":256}
+},
+"NagualCharacterBack.png":
+{
+	"frame": {"x":704,"y":402,"w":183,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":256},
+	"sourceSize": {"w":183,"h":256}
+},
+"NagualDeckBack.png":
+{
+	"frame": {"x":890,"y":402,"w":183,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":256},
+	"sourceSize": {"w":183,"h":256}
+},
+"Pounce.png":
+{
+	"frame": {"x":1554,"y":0,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"PredatorsCamouflage.png":
+{
+	"frame": {"x":0,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"PrideAndFerocity.png":
+{
+	"frame": {"x":259,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ProwlUnseen.png":
+{
+	"frame": {"x":518,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ReplenishedByRain.png":
+{
+	"frame": {"x":777,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"RisingStrength.png":
+{
+	"frame": {"x":1036,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ScourTheLand.png":
+{
+	"frame": {"x":1295,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ShamansCalendar.png":
+{
+	"frame": {"x":1554,"y":201,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"Shapeshifting.png":
+{
+	"frame": {"x":0,"y":402,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+},
+"ViciousTeeth.png":
+{
+	"frame": {"x":259,"y":402,"w":256,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":198},
+	"sourceSize": {"w":256,"h":198}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "NagualAtlas0.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":2048},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:10f9365ecdc18abbfd17d39d14de7b0c:b80aa1af8bd8d04bfad3e852441b2253:608c1eb4d8d296e5b9308248582cadb4$"
+}
+}
