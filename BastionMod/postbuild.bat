@@ -1,6 +1,6 @@
 copy /y "C:\Users\%USERNAME%\source\repos\BastionPublishing\BastionMod\bin\Release\BastionComics.dll" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing"
 copy /y "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\manifest.json" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing"
-Rem copy /y "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\preview.jpg" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing"
+copy /y "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\preview.png" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing"
 robocopy "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\Atlas" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing\Atlas" /e
 robocopy "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\Cutouts" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing\Cutouts" /e
 robocopy "C:\Users\%USERNAME%\source\repos\BastionPublishing\Resources\DeckBrowser" "C:\Program Files (x86)\Steam\steamapps\common\Sentinels of the Multiverse\mods\BastionPublishing\DeckBrowser" /e
