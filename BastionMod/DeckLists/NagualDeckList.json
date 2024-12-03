@@ -65,7 +65,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "Abeulo poured his soul{BR}into creating this mask. I wear it{BR}only when the need is most dire."
 				}
 			],
@@ -88,11 +88,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Cottonmouth",
+					"name": "Cottonmouth",
 					"text": "Oh, look. The poor{BR}pussycat is tired."
 				},
 				{
-					"identifier": "Taipan",
+					"name": "Taipan",
 					"text": "I want to see him suffer."
 				}
 			],
@@ -118,7 +118,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "Carving a piece of jade{BR}into an axe is a lost art."
 				}
 			],
@@ -142,11 +142,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "Jaguar has{BR}mystical powers."
 				},
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "So, by wearing the pelt I can{BR}draw on them?"
 				}
 			],
@@ -172,7 +172,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "My people suffered at your{BR}hands, now suffer at [b]mine![/b]"
 				}
 			],
@@ -199,7 +199,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "Our tonal animals{BR}are always within us;{BR}with a channeling dance, I let{BR}mine free."
 				}
 			],
@@ -221,7 +221,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "I told you that{BR}burning the fields would work.{BR}Those farmers have all run away."
 				}
 			],
@@ -245,11 +245,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Hired Mercs",
+					"name": "Hired Mercs",
 					"text": "Can’t wait to get{BR}out of this{BR}god-forsaken swamp."
 				},
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "Did you hear that?"
 				}
 			],
@@ -271,7 +271,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "Who, and what you are will be{BR}proved when struggles come."
 				}
 			],
@@ -295,7 +295,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "Come Jose,{BR}you must learn to{BR}embrace the shadows."
 				}
 			],
@@ -320,7 +320,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "The storms are not to be feared,{BR}for with the rain comes rebirth,{BR}regrowth, and renewal."
 				}
 			],
@@ -349,7 +349,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "As I diminish in power...{BR} the beast within rises up."
 				}
 			],
@@ -372,11 +372,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Natureza",
+					"name": "Natureza",
 					"text": "How do you know{BR}this terrain so well?"
 				},
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "I wandered the rainforest{BR}as a feral beast."
 				}
 			],
@@ -398,7 +398,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "Studying the stars will{BR}help you predict the future, and{BR}predicting the future can{BR}help you change it."
 				}
 			],
@@ -422,11 +422,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "IQ",
+					"name": "IQ",
 					"text": "Meow! Is that something{BR}I could learn? I’ve got{BR}a few minutes before class!"
 				},
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "Mastery took years of{BR}focus and practice."
 				}
 			],
@@ -450,11 +450,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Meme",
+					"name": "Meme",
 					"text": "Jose, what makes the{BR}jaguar so dangerous?"
 				},
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "Jaguars are so deadly because they{BR}are able to approach unseen and{BR}then strike."
 				}
 			],

@@ -83,7 +83,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "There is a powerful{BR}darkness that lurks in the shadows,{BR}an ancient evil waiting to be rediscovered."
 				}
 			],
@@ -107,11 +107,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "It's just a job."
 				},
 				{
-					"identifier": "Nagual",
+					"name": "Nagual",
 					"text": "For you, yes. But these were our homes, our lives."
 				}
 			],
@@ -136,11 +136,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Taipan",
+					"name": "Taipan",
 					"text": "We brought the first class of Vipers."
 				},
 				{
-					"identifier": "Estrangular",
+					"name": "Estrangular",
 					"text": "Young, Ruthlesss, Perfect."
 				}
 			],
@@ -166,11 +166,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "Argentine made, 30mm cannon,{BR}a mechanized terror."
 				},
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "In hard times, everything has a price."
 				}
 			],
@@ -193,7 +193,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Estrangular",
+					"name": "Estrangular",
 					"text": "You thought I would be{BR}harmed by some bright light?"
 				}
 			],
@@ -216,11 +216,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Meme",
+					"name": "Meme",
 					"text": "Someone was watching us bathing."
 				},
 				{
-					"identifier": "Abuelo Ariche",
+					"name": "Abuelo Ariche",
 					"text": "I will speak to Jose, he will handle it."
 				}
 			],
@@ -242,11 +242,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "Those farmers made a fool of me!"
 				},
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "Murder isn't included in the price we discussed."
 				}
 			],
@@ -271,7 +271,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "The job is simple,{BR}and if things get messy,{BR}I have found a specialist."
 				}
 			],
@@ -296,15 +296,15 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "Jefe? Jefe?"
 				},
 				{
-					"identifier": "Estrangular",
+					"name": "Estrangular",
 					"text": "[b]}inhuman screaming{[/b]"
 				},
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "[b]Kill that thing![/b]"
 				}
 			],
@@ -329,7 +329,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "Enough games. Throw a rope around that farmer's neck and let him swing."
 				}
 			],
@@ -352,7 +352,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Estrangular",
+					"name": "Estrangular",
 					"text": "Look deeply, look into my eyesss. Can you sssee what you desssire mossst?"
 				}
 			],
@@ -376,7 +376,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "I have heard that you like{BR}the thrill of hunting. On my ranch{BR}we have many... exotic targets."
 				}
 			],
@@ -400,7 +400,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Estrangular",
+					"name": "Estrangular",
 					"text": "After ssso many yearsss, the tassste of blood. My power isss returning."
 				}
 			],
@@ -423,7 +423,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "\"Lariat\" Espinosa",
+					"name": "\"Lariat\" Espinosa",
 					"text": "Please! I have a family, let me go. I will never speak of what happened here!"
 				}
 			],
@@ -451,7 +451,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Obscuro",
+					"name": "Obscuro",
 					"text": "Ah, the key to infinite{BR}power, and yet the fools have left it{BR}here unprotected!"
 				}
 			],
@@ -478,7 +478,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Museum Guide",
+					"name": "Museum Guide",
 					"text": "Here we see a selection{BR}of pre-Aztec items recovered{BR}from a cultural site just recently."
 				}
 			],
@@ -502,11 +502,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "My foreman will also ride along."
 				},
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "He looks like a fighting cock."
 				}
 			],
@@ -530,11 +530,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Arsonist",
+					"name": "Arsonist",
 					"text": "This job is going to{BR}require skilled soldiers."
 				},
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "I will send several of my 'hands' to{BR}help with the work."
 				}
 			],
@@ -559,7 +559,7 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Rico",
+					"name": "Rico",
 					"text": "Not to worry, road{BR}access to the village will be...{BR}unavailable."
 				}
 			],
@@ -581,11 +581,11 @@
 			],
 			"flavorQuotes": [
 				{
-					"identifier": "Kodiak",
+					"name": "Kodiak",
 					"text": "Took me almost an hour{BR}to pry the jaws loose."
 				},
 				{
-					"identifier": "Doc Havoc",
+					"name": "Doc Havoc",
 					"text": "This venom is no laughing matter."
 				}
 			],
